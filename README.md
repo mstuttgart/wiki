@@ -1,18 +1,20 @@
 ![dotfiles](https://user-images.githubusercontent.com/8174740/223229886-4830375d-b82f-416a-b9c7-be0affc65db7.png)
 
-<p align="center">
+[![My Skills](https://skillicons.dev/icons?i=py,js,html,css,bash,git,linux)](https://skillicons.dev)
+
+<!-- <p align="center">
   <a href="https://github.com/mstuttgart/til">
     <img src="https://img.shields.io/badge/OS-Linux-informational?style=for-the-badge&logo=linux&logoColor=white&color=bed5c5" alt="License">
   </a>
   <a href="https://github.com/mstuttgart/til/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/mstuttgart/til.svg?style=for-the-badge&color=bed5c5" alt="License">
   </a>
-</p>
+</p> -->
 
-<p align="center">
+<!-- <p align="center">
   <a href="#about">About</a> |
   <a href="#credits">Credits</a>
-</p>
+</p> -->
 
 ## About
 
