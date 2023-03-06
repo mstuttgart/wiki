@@ -252,3 +252,4 @@ São operadores de *bits* utilizados para trabalhar com numeros de 32 bits. Qual
 ## Referências
 
 [^operators]: https://www.w3schools.com/js/js_operators.asp
+[^coales]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing

@@ -510,3 +510,13 @@ var a = {nome: 'João'}
 a = null
 console.log(a)    // null
 ```
+
+## Referências
+
+[^IEEE]: https://en.wikipedia.org/wiki/IEEE_754
+[^number]: https://www.w3schools.com/jsref/jsref_obj_number.asp
+[^string]: https://www.w3schools.com/jsref/jsref_obj_string.asp
+[^boolean]: https://www.w3schools.com/jsref/jsref_obj_boolean.asp
+[^var]: https://www.w3schools.com/jsref/jsref_var.asp
+[^let]: https://www.w3schools.com/js/js_let.asp
+[^const]: https://www.w3schools.com/js/js_const.asp
