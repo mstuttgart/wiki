@@ -1,5 +1,3 @@
-#javascript #language
-
 ## Prototypes & Classes 
 
 Javascript permite programação orientada a objetos utilizando herança baseada em prototipos.

@@ -1,11 +1,10 @@
 # Your Book Title
 
-## TECH
 - Bash
   * [Fundamentos](Bash/Fundamentos.md)
 - Javascript
   * [Fundamentals](Javascript/Fundamentals.md)
-  * [Prototypes Classes](Javascript/Prototypes%20& Classes.md)
+  * [Prototypes Classes](Javascript/Prototypes-Classes.md)
   * [Regex](Javascript/Regex.md)
 - Snippets
   - Ansible
