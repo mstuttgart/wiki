@@ -1,6 +1,6 @@
 # Your Book Title
 
-## TECH
+# TECH
 
 - Bash
   * [Fundamentos](Bash/Fundamentos.md)
@@ -38,7 +38,7 @@
     * [Comando Para Apagar Varios Bancos De Dados](Snippets/postgresql/Comando%20para apagar varios bancos de dados.md)
   - Python
     * [Capturar strings segundo padrão](Snippets/python/Capturar%20strings segundo padrão.md)
-  - SSH
+  - Ssh
     * [Adicionar Chave Ssh Servidor](Snippets/ssh/Adicionar%20chave ssh servidor.md)
     * [Restore De Chaves SSH](Snippets/ssh/Restore%20de chaves SSH.md)
     * [Sair de uma sessão SSH congelada](Snippets/ssh/Sair%20de uma sessão SSH congelada.md)
