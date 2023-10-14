@@ -1,7 +1,5 @@
-![dotfiles](https://user-images.githubusercontent.com/8174740/223229886-4830375d-b82f-416a-b9c7-be0affc65db7.png)
 
-[![My Skills](https://skillicons.dev/icons?i=py,js,html,css,bash,git,linux)](https://skillicons.dev)
-
+![wallpaper-11](https://github.com/mstuttgart/til/assets/8174740/453531a6-95e3-439e-a053-540c6c866109)
 
 ## About
 
