@@ -1,7 +1,6 @@
 # Your Book Title
 
-# TECH
-
+## TECH
 - Bash
   * [Fundamentos](Bash/Fundamentos.md)
 - Javascript
