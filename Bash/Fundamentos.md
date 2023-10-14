@@ -119,11 +119,11 @@ Aqui podemos utilizar `if` como em outras linguagens. O `if` possui a seguinte e
 #!/bin/bash
 
 if test "$NAME" == "Maria"; then
-	# codigo ...
+    # codigo ...
 elif test "$NAME" != "João"; then
-	# codigo ...
+    # codigo ...
 else
-	# codigo ...
+    # codigo ...
 fi
 ```
 Tambem podemos usar a seguinte notação:
@@ -132,11 +132,11 @@ Tambem podemos usar a seguinte notação:
 #!/bin/bash
 
 if [ "$NAME" == "Maria" ]; then
-	# codigo ...
+    # codigo ...
 elif [ "$NAME" != "João" ]; then
-	# codigo ... 
+    # codigo ... 
 else
-	# codigo ....
+    # codigo ....
 fi
 ```
 
@@ -149,9 +149,9 @@ Tambem temos operadores logicos que podem ser usados em duas ou mais condições
 #!/bin/bash
 
 if [ "$NAME" == "Maria" ] ||  [ "$NAME" == "João" ]; then
-	# codigo ...
+    # codigo ...
 else
-	# codigo ....
+    # codigo ....
 fi
 ```
 
@@ -196,7 +196,7 @@ A seguir, temos um exemplo de uso do `for`:
 #!/bin/bash
 
 for aluno in "${alunos[@]}"; do
-	echo "$aluno"
+    echo "$aluno"
 done
 
 # =>
@@ -233,15 +233,15 @@ Exemplo de uso do `while`:
 count = 0
 
 while test "$count" -lt 10 ; do
-	echo "$count"
-	$(( count += 1 ))
+    echo "$count"
+    $(( count += 1 ))
 done
 
 # ou, utilizando outra notação
 
 while [ "$count" -lt 10 ]; do
-	echo "$count"
-	$(( count += 1 ))
+    echo "$count"
+    $(( count += 1 ))
 done
 ```
 
@@ -251,12 +251,12 @@ Se desejamos sair do `while`, sem concluir sua condição, podemos usar o comand
 #!/bin/bash
 
 while; do
-	if test -f /tmp/lock; then
-		echo "Aguardando liberação do lock..."
-		sleep 1
-	else
-		break
-	fi
+    if test -f /tmp/lock; then
+    echo "Aguardando liberação do lock..."
+    sleep 1
+    else
+    break
+    fi
 done
 
 ```
