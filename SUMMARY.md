@@ -1,46 +1,49 @@
-# Your Book Title
+# Table of contents
+
+* [INTRO](README.md)
 
 ## TECH
-- Bash
+
+* [Bash](tech/bash/README.md)
   * [Fundamentos](Bash/Fundamentos.md)
-- Javascript
+* [Javascript](tech/javascript/README.md)
   * [Fundamentals](Javascript/Fundamentals.md)
   * [Promises](Javascript/Promises.md)
   * [Prototypes Classes](Javascript/Prototypes-Classes.md)
   * [Regex](Javascript/Regex.md)
-- Snippets
-  - Ansible
-    * [Impedir Blockinfile Do Ansible De Duplicar](Snippets/ansible/Impedir%20blockinfile do Ansible de duplicar.md)
-  - Git
-    * [Comando Para Deletar Branchs Locais Merged](Snippets/git/Comando%20para deletar branchs locais 'merged'.md)
-    * [Excluir Submodule Do Git](Snippets/git/Excluir%20submodule do git.md)
-  - Linux
-    * [Comando para limpar o diretório `tmp`](Snippets/linux/Comando%20para limpar o diretório `tmp`.md)
-    * [Como Obter IP Externo Da Maquina](Snippets/linux/Como%20obter IP externo da maquina.md)
-    * [Como verificar se uma porta está sendo acessada](Snippets/linux/Como%20verificar se uma porta está sendo acessada.md)
-    * [Configurando timezone ubuntu 20.04](Snippets/linux/Configurando%20timezone ubuntu 20.04.md)
-    * [Montar partição de linux](Snippets/linux/Montar%20partição de linux.md)
-    * [Mover conteúdo de várias pastas para uma pasta especifica](Snippets/linux/Mover%20conteúdo de várias pastas para uma pasta especifica.md)
-    * [Verificando espaço em disco](Snippets/linux/Verificando%20espaço em disco.md)
-  - Nginx
-    * [Bug Ao Fazer Upload De Anexos Quand Usamos Nginx](Snippets/nginx/Bug%20ao fazer upload de anexos quand usamos nginx.md)
-    * [Controlar Acesso Para Determinados I Ps Pelo Nginx](Snippets/nginx/Controlar%20acesso para determinados IPs pelo nginx.md)
-  - Odoo
-    * [Comando para atualização separada de bancos](Snippets/odoo/Comando%20para atualização separada de bancos.md)
-    * [Configuração para criação ou upload de novo banco de dados](Snippets/odoo/Configuração%20para criação ou upload de novo banco de dados.md)
-    * [Configuração para execução do queue](Snippets/odoo/Configuração%20para execução do queue.md)
-    * [Erro de campos do Odoo que não são traduzidos](Snippets/odoo/Erro%20de campos do Odoo que não são traduzidos.md)
-    * [Selection Dinamico](Snippets/odoo/Selection%20Dinamico.md)
-    * [Url de para visualização de relatórios durante desenvolvimento](Snippets/odoo/Url%20de para visualização de relatórios durante desenvolvimento.md)
-  - Postgresql
-    * [Acessando Base Externa Com Pg Admin](Snippets/postgresql/Acessando%20base externa com PgAdmin.md)
-    * [Clean Postgres Install](Snippets/postgresql/Clean%20Postgres Install.md)
-    * [Comando Para Apagar Varios Bancos De Dados](Snippets/postgresql/Comando%20para apagar varios bancos de dados.md)
-  - Python
-    * [Capturar strings segundo padrão](Snippets/python/Capturar%20strings segundo padrão.md)
-  - Ssh
-    * [Adicionar Chave Ssh Servidor](Snippets/ssh/Adicionar%20chave ssh servidor.md)
-    * [Restore De Chaves SSH](Snippets/ssh/Restore%20de chaves SSH.md)
-    * [Sair de uma sessão SSH congelada](Snippets/ssh/Sair%20de uma sessão SSH congelada.md)
-    * [SSH Foward Com Crontab](Snippets/ssh/SSH%20foward com crontab.md)
-    * [Transferência de arquivos com SSH](Snippets/ssh/Transferência%20de arquivos com SSH.md)
+* [Snippets](tech/snippets/README.md)
+  * [Ansible](tech/snippets/ansible/README.md)
+    * [\[Impedir Blockinfile Do Ansible De Duplicar\](Snippets/ansible/Impedir%20blockinfile do Ansible de duplicar.md)](tech/snippets/ansible/impedir-blockinfile-do-ansible-de-duplicar-snippets-ansible-impedir-20blockinfile-do-ansible-de-dupl.md)
+  * [Git](tech/snippets/git/README.md)
+    * [\[Comando Para Deletar Branchs Locais Merged\](Snippets/git/Comando%20para deletar branchs locais 'merged'.md)](tech/snippets/git/comando-para-deletar-branchs-locais-merged-snippets-git-comando-20para-deletar-branchs-locais-merged.md)
+    * [\[Excluir Submodule Do Git\](Snippets/git/Excluir%20submodule do git.md)](tech/snippets/git/excluir-submodule-do-git-snippets-git-excluir-20submodule-do-git.md.md)
+  * [Linux](tech/snippets/linux/README.md)
+    * [\[Comando para limpar o diretório tmp\](Snippets/linux/Comando%20para limpar o diretório tmp.md)](tech/snippets/linux/comando-para-limpar-o-diretorio-tmp-snippets-linux-comando-20para-limpar-o-diretorio-tmp.md.md)
+    * [\[Como Obter IP Externo Da Maquina\](Snippets/linux/Como%20obter IP externo da maquina.md)](tech/snippets/linux/como-obter-ip-externo-da-maquina-snippets-linux-como-20obter-ip-externo-da-maquina.md.md)
+    * [\[Como verificar se uma porta está sendo acessada\](Snippets/linux/Como%20verificar se uma porta está sendo acessada.md)](tech/snippets/linux/como-verificar-se-uma-porta-esta-sendo-acessada-snippets-linux-como-20verificar-se-uma-porta-esta-se.md)
+    * [\[Configurando timezone ubuntu 20.04\](Snippets/linux/Configurando%20timezone ubuntu 20.04.md)](tech/snippets/linux/configurando-timezone-ubuntu-20.04-snippets-linux-configurando-20timezone-ubuntu-20.04.md.md)
+    * [\[Montar partição de linux\](Snippets/linux/Montar%20partição de linux.md)](tech/snippets/linux/montar-particao-de-linux-snippets-linux-montar-20particao-de-linux.md.md)
+    * [\[Mover conteúdo de várias pastas para uma pasta especifica\](Snippets/linux/Mover%20conteúdo de várias pastas para uma pasta especifica.md)](tech/snippets/linux/mover-conteudo-de-varias-pastas-para-uma-pasta-especifica-snippets-linux-mover-20conteudo-de-varias.md)
+    * [\[Verificando espaço em disco\](Snippets/linux/Verificando%20espaço em disco.md)](tech/snippets/linux/verificando-espaco-em-disco-snippets-linux-verificando-20espaco-em-disco.md.md)
+  * [Nginx](tech/snippets/nginx/README.md)
+    * [\[Bug Ao Fazer Upload De Anexos Quand Usamos Nginx\](Snippets/nginx/Bug%20ao fazer upload de anexos quand usamos nginx.md)](tech/snippets/nginx/bug-ao-fazer-upload-de-anexos-quand-usamos-nginx-snippets-nginx-bug-20ao-fazer-upload-de-anexos-quan.md)
+    * [\[Controlar Acesso Para Determinados I Ps Pelo Nginx\](Snippets/nginx/Controlar%20acesso para determinados IPs pelo nginx.md)](tech/snippets/nginx/controlar-acesso-para-determinados-i-ps-pelo-nginx-snippets-nginx-controlar-20acesso-para-determinad.md)
+  * [Odoo](tech/snippets/odoo/README.md)
+    * [\[Comando para atualização separada de bancos\](Snippets/odoo/Comando%20para atualização separada de bancos.md)](tech/snippets/odoo/comando-para-atualizacao-separada-de-bancos-snippets-odoo-comando-20para-atualizacao-separada-de-ban.md)
+    * [\[Configuração para criação ou upload de novo banco de dados\](Snippets/odoo/Configuração%20para criação ou upload de novo banco de dados.md)](tech/snippets/odoo/configuracao-para-criacao-ou-upload-de-novo-banco-de-dados-snippets-odoo-configuracao-20para-criacao.md)
+    * [\[Configuração para execução do queue\](Snippets/odoo/Configuração%20para execução do queue.md)](tech/snippets/odoo/configuracao-para-execucao-do-queue-snippets-odoo-configuracao-20para-execucao-do-queue.md.md)
+    * [\[Erro de campos do Odoo que não são traduzidos\](Snippets/odoo/Erro%20de campos do Odoo que não são traduzidos.md)](tech/snippets/odoo/erro-de-campos-do-odoo-que-nao-sao-traduzidos-snippets-odoo-erro-20de-campos-do-odoo-que-nao-sao-tra.md)
+    * [Selection Dinamico](<Snippets/odoo/Selection Dinamico.md>)
+    * [\[Url de para visualização de relatórios durante desenvolvimento\](Snippets/odoo/Url%20de para visualização de relatórios durante desenvolvimento.md)](tech/snippets/odoo/url-de-para-visualizacao-de-relatorios-durante-desenvolvimento-snippets-odoo-url-20de-para-visualiza.md)
+  * [Postgresql](tech/snippets/postgresql/README.md)
+    * [\[Acessando Base Externa Com Pg Admin\](Snippets/postgresql/Acessando%20base externa com PgAdmin.md)](tech/snippets/postgresql/acessando-base-externa-com-pg-admin-snippets-postgresql-acessando-20base-externa-com-pgadmin.md.md)
+    * [\[Clean Postgres Install\](Snippets/postgresql/Clean%20Postgres Install.md)](tech/snippets/postgresql/clean-postgres-install-snippets-postgresql-clean-20postgres-install.md.md)
+    * [\[Comando Para Apagar Varios Bancos De Dados\](Snippets/postgresql/Comando%20para apagar varios bancos de dados.md)](tech/snippets/postgresql/comando-para-apagar-varios-bancos-de-dados-snippets-postgresql-comando-20para-apagar-varios-bancos-d.md)
+  * [Python](tech/snippets/python/README.md)
+    * [\[Capturar strings segundo padrão\](Snippets/python/Capturar%20strings segundo padrão.md)](tech/snippets/python/capturar-strings-segundo-padrao-snippets-python-capturar-20strings-segundo-padrao.md.md)
+  * [Ssh](tech/snippets/ssh/README.md)
+    * [\[Adicionar Chave Ssh Servidor\](Snippets/ssh/Adicionar%20chave ssh servidor.md)](tech/snippets/ssh/adicionar-chave-ssh-servidor-snippets-ssh-adicionar-20chave-ssh-servidor.md.md)
+    * [\[Restore De Chaves SSH\](Snippets/ssh/Restore%20de chaves SSH.md)](tech/snippets/ssh/restore-de-chaves-ssh-snippets-ssh-restore-20de-chaves-ssh.md.md)
+    * [\[Sair de uma sessão SSH congelada\](Snippets/ssh/Sair%20de uma sessão SSH congelada.md)](tech/snippets/ssh/sair-de-uma-sessao-ssh-congelada-snippets-ssh-sair-20de-uma-sessao-ssh-congelada.md.md)
+    * [\[SSH Foward Com Crontab\](Snippets/ssh/SSH%20foward com crontab.md)](tech/snippets/ssh/ssh-foward-com-crontab-snippets-ssh-ssh-20foward-com-crontab.md.md)
+    * [\[Transferência de arquivos com SSH\](Snippets/ssh/Transferência%20de arquivos com SSH.md)](tech/snippets/ssh/transferencia-de-arquivos-com-ssh-snippets-ssh-transferencia-20de-arquivos-com-ssh.md.md)
