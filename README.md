@@ -14,7 +14,7 @@ layout:
 
 # INTRO
 
-<figure><img src=".img/main02.jpg" alt=""><figcaption><p>Escola de Antenas por Rafael</p></figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHxmb3Jlc3R8ZW58MHx8fHwxNjk3NDY0OTE2fDA&#x26;ixlib=rb-4.0.3&#x26;q=85" alt=""><figcaption></figcaption></figure>
 
 ### About
 
