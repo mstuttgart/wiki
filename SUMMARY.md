@@ -5,6 +5,7 @@
   * [Fundamentos](Bash/Fundamentos.md)
 - Javascript
   * [Fundamentals](Javascript/Fundamentals.md)
+  * [Promises](Javascript/Promises.md)
   * [Prototypes Classes](Javascript/Prototypes-Classes.md)
   * [Regex](Javascript/Regex.md)
 - Snippets
