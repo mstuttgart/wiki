@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # INTRO
 
 <figure><img src=".img/main02.jpg" alt=""><figcaption><p>Escola de Antenas por Rafael</p></figcaption></figure>
