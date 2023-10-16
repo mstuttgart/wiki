@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # O Homem Mais Rico da Babilônia
 
 * Autor: George S. Clason
@@ -29,7 +43,7 @@ As pessoas normalmente seguem o seguinte fluxo quando recebem seu salário:
 
 ```mermaid
 flowchart LR
-Salário --> Despesas --> Lazer --> Poupança
+  Salário --> Despesas --> Lazer --> Poupança
 ```
 
 Após pagar os outros, a pessoa guarda para si o que restou (se restou algo). Arkad aconselha que devemos nos pagar primeiro, e após isso, utilizar o restante para o pagamento de despesas e lazer.
