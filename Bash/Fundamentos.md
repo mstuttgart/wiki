@@ -261,7 +261,6 @@ done
 
 ```
 
-
-Referências:
+# Referências:
 - https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction
 - https://learnxinyminutes.com/docs/bash/

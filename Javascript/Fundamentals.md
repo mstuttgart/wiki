@@ -1,12 +1,10 @@
-# Fundamentals
-
-\#javascript #language
+#javascript #language
 
 Javascript é uma linguagem de auto nível que segue o padrão ECMAScript. Ela é fracamente tipada e possui tipagem dinâmica, Orientação Objetos baseada em Protótipos e funções como cidadão de primeira classe. Suporta os paradigmas de programação imperativo, funcional e orientada a eventos.
 
-### Características
+## Características
 
-#### Fracamente Tipada
+### Fracamente Tipada
 
 Uma linguagem **fracamente tipada** aceita que valores de tipos diferentes sejam atribuídos a uma mesma variável.
 
@@ -16,19 +14,17 @@ var a = 'exemplo'
 a = 10 // não causa erro
 ```
 
-Em linguagens **fortemente tipadas** (como C, C++ e Java), ocorreria um erro no codigo acima. Pois um variável que foi declarada com _string_, seria permitido receber apenas valores do tipo _string_.
+Em linguagens **fortemente tipadas** (como C, C++ e Java), ocorreria um erro no codigo acima. Pois um variável que foi declarada com *string*, seria permitido receber apenas valores do tipo *string*.
 
-#### Tipagem Dinâmica
+### Tipagem Dinâmica
 
-Uma linguagem pode possuir tipagem _Estática_ ou _Dinâmica_.
-
-***
-
+Uma linguagem pode possuir tipagem *Estática* ou *Dinâmica*.
+****
 Na **Tipagem Estática**, quando o tipo da valores que a variável irá receber é determinado na declaração da variável (como ocorre no C, C++ e Java).
 
 Na **Tipagem Dinâmica**, o tipo de valor da variável é determinado somente **no** momento que um valor é atribuído a ela.
 
-Podemos **usar** o comando _typeof_ para determinar o tipo do valor contido na variável.
+Podemos **usar** o comando *typeof* para determinar o tipo do valor contido na variável.
 
 > typeof value
 
@@ -42,7 +38,7 @@ a = 10
 typeof a    // number
 ```
 
-### Number[^1]
+## Number [^number]
 
 Em Javascript, o tipo **Number** é uma função e representa tanto números inteiros (Integer) como números de ponto flutuante (Float). Ele apresenta várias operações muito úteis, como no exemplo a seguir.
 
@@ -68,13 +64,13 @@ Number.isInteger(15)    // false
 (7).toString(2)    // '111'
 ```
 
-#### Números especiais
+### Números especiais
 
 Javascript possui alguns valores de números especiais que normalmente não encontramos em outra linguagem: `NaN` e `Infinity`.
 
-**NaN**
+#### NaN
 
-O valor `Nan` (do inglês, _Not a Number_) é produzido quando o resultado de uma operação retorna um valor que não é um _Number_.
+O valor `Nan` (do inglês, *Not a Number*) é produzido quando o resultado de uma operação retorna um valor que não é um *Number*.
 
 Exemplo:
 
@@ -89,7 +85,7 @@ var NaN + 4   // NaN
 
 **Importante**:
 
-> `NaN` é o único valor que não ígual a si mesmo.
+> `NaN` é o único valor que não ígual a  si mesmo. 
 
 ```javascript
 NaN === NaN   // false
@@ -97,7 +93,7 @@ NaN === NaN   // false
 typeof NaN  // Number
 ```
 
-Essa peculiaridade vem da regra [IEEE](https://en.wikipedia.org/wiki/IEEE\_754) utilizada para operações com ponto flutuante. Isso ocorre devido a natureza dos valores que o `NaN` pode representar.
+Essa peculiaridade vem da regra [IEEE](https://en.wikipedia.org/wiki/IEEE_754) utilizada para operações com ponto flutuante. Isso ocorre devido a natureza dos valores que o `NaN` pode representar.
 
 ```javascript
 var raizA = Math.sqrt(-4)   // NaN
@@ -113,9 +109,9 @@ isNaN('12a')  // true
 isNan(4)      // false
 ```
 
-**Infinity**
+#### Infinity
 
-É considerado o maior "número" da linguagem, assim como `-Infinty` é considerado o menor, com exceção do `NaN`. De modo a verificar se um _Number_ assume um dos valores `Infinity`, utilizamos a função `isFinite`.
+É considerado o maior "número" da linguagem, assim como `-Infinty` é considerado o menor, com exceção do `NaN`. De modo a verificar se um *Number* assume um dos valores `Infinity`, utilizamos a função `isFinite`.
 
 ```javascript
 isFinite(1000)      // true
@@ -123,11 +119,11 @@ isFinite(Infinity)  // false
 isFinite(NaN)       // false
 ```
 
-#### Operações aritméticas
+### Operações aritméticas
 
-O Javascript apresenta alguma excentricidades em relação ao _Number_ que devem ser observadas.
+O Javascript apresenta alguma excentricidades em relação ao *Number* que devem ser observadas.
 
-**Divisão por zero**
+#### Divisão por zero
 
 Diferente de outras linguagens, o Javascript não irá acusar erro ou disparar uma exceção quando ocorrer uma divisão por zero. Ao invés disso, a linguagem possui o tipo **Infinity**, um tipo especial para representar valores infinitos.
 
@@ -135,7 +131,7 @@ Diferente de outras linguagens, o Javascript não irá acusar erro ou disparar u
 a = 5/8   // Infinity
 ```
 
-**Operações com tipos diferentes**
+#### Operações com tipos diferentes
 
 Por ser fracamente tipada, o Javascript permite alguns tipos de operações envolvendo valores de tipos diferentes.
 
@@ -146,7 +142,7 @@ b = '10' * 2    // 10
 c = '10,2' * 2    // Nan (indefinido, por causa da virgula, o JS nao sabe que é um número)
 ```
 
-**Chamando funções diretamente**
+#### Chamando funções diretamente
 
 Quando desejado podemos chamar as funções diretamente pelo Number, sem precisar guardar o valor em uma variável primeiro.
 
@@ -156,17 +152,17 @@ Quando desejado podemos chamar as funções diretamente pelo Number, sem precisa
 (10).toString()    // '10'
 ```
 
-**Operações com números de ponto flutuante**
+#### Operações com números de ponto flutuante
 
-Em operações com números de ponto flutuante, o Javascript sempre irá retornar o número máximo de casas decimais, seguindo o padrão IEEE .
+Em operações com números de ponto flutuante, o Javascript sempre irá retornar o número máximo de casas decimais, seguindo o padrão IEEE [^IEEE].
 
 ```javascript
 var soma = 0.1 + 0.7    //0.7999999999999999
 ```
 
-#### Math
+### Math [^math]
 
-O objeto **Math** nos permite executar tarefas matemáticas, como raiz quadrada, elevar um número a determinada potência, seno e cosseno de um determinado angulo e determinar o máximo e mínimo de um determinado conjunto de valores, entre outras funções.
+O objeto **Math** nos permite executar tarefas matemáticas, como raiz quadrada, elevar um número a determinada potência, seno e cosseno de um determinado angulo e determinar o máximo e mínimo de um determinado conjunto de valores, entre outras funções. 
 
 **Math** não é um construtor, então todos os metodos do objeto podem ser chamados sem criá-lo (semelhante a funções estática de outras linguagens).
 
@@ -183,9 +179,9 @@ Math.floor(3.1415)    // 3 -> arredondamento para o inteiro anterior
 Math.ceil(3.1415)     // 4 -> arredondamento para o inteiro superior
 ```
 
-### String
+## String [^string]
 
-Em Javascript, uma _string_ pode ser representada tanto por aspas duplas quanto por aspas simples. A _string_ é tratada como uma lista, isso nos permite realizar buscas e cortes na mesma, conforme a necessidade.
+Em Javascript, uma *string* pode ser representada tanto por aspas duplas quanto por aspas simples. A *string*  é tratada como uma lista, isso nos permite realizar buscas e cortes na mesma, conforme a necessidade.
 
 Exemplos:
 
@@ -211,11 +207,11 @@ text.substring(0, 3)    // 'Java'. Do indice 0 ao 3
 'Javascript, Python, Go'.search('Python')    // 12. Indice da primeira ocorrencia que coincide coma busca
 ```
 
-#### Interpolação e Concatenação de strings
+### Interpolação e Concatenação de strings
 
-O Javascript, assim como outras linguagens, também apresenta recursos para _interpolação_ e _concatenação_ de strings. **Interpolação de Strings** seria utilizar uma string como _template_, onde essa string possui variaveis nas partes de texto que valores reais durante o processo de interpolação.
+O Javascript, assim como outras linguagens, também apresenta recursos para *interpolação* e *concatenação* de strings. **Interpolação de Strings** seria utilizar uma string como *template*,  onde essa string possui variaveis nas partes de texto que valores reais durante o processo de interpolação.
 
-Exemplo _concatenação_:
+Exemplo  *concatenação*:
 
 ```javascript
 text = 'Javascript'
@@ -227,7 +223,7 @@ text.cocat(' é ', ' nota', ' 10!')    // 'Javascript é nota 10!'
 text = text + ' é ' + ' nota ' + ' 10!'
 ```
 
-Exemplo _interpolação_:
+Exemplo *interpolação*:
 
 ```javascript
 var nota = 10
@@ -243,38 +239,42 @@ O Javascript tentará executar tudo o que esta dentro da chave `${}`. Desde a ex
 text = `2 + 3 = ${2 + 3}`    // '2 + 3 = 5'
 ```
 
-### Boolean[^2]
+## Boolean [^boolean]
 
-Em Javascript, os valores booleanos são representados por _true_ e _false_. Como ocorre em algumas linguagens, alguns valores também podem representar _true_ ou _false_ quando utilizados em determinados contextos.
+Em Javascript, os valores booleanos são representados por *true* e *false*. Como ocorre em algumas linguagens, alguns valores também podem representar *true* ou *false* quando utilizados em determinados contextos. 
 
-Os valores a seguir são considerados _true_:
+Os valores a seguir são considerados *true*:
 
-* `true`,
-* `1`: ou qualquer inteiro diferente de zero,
-* `' '`: string com pelo menos um caracter (mesmo que seja espaço) ,
-* `Infinity`: palavra reservada,
-* `[]`: array vazio,
-* `{}`: objeto literal.
+- `true`,
+- `1`: ou qualquer inteiro diferente de zero,
+- `' '`: string com pelo menos um caracter (mesmo que seja espaço) ,
+- `Infinity`: palavra reservada,
+- `[]`: array vazio,
+- `{}`: objeto literal.
 
-Os valores a seguir são considerados _false_:
+Os valores a seguir são considerados *false*:
 
-* `false`,
-* `0`: valor inteiro,
-* `null`: palavra reservada,
-* `undefined`: palavra reservada,
-*   `NaN`: palavra reservada (_Not a Number_).
+- `false`,
 
-    ### Declaração de variáveis
+- `0`: valor inteiro,
 
-**let** e **const** são substitutos para **var**, introduzidos no [ECMAScript6](https://www.w3schools.com/js/js\_es6.asp) e proveem escopo de block para o Javascript. Antes do ES6 (2015), o JavaScript possuia apernas _escopo global_ e _escopo de função_.
+- `null`: palavra reservada,
 
-#### var
+- `undefined`: palavra reservada,
 
-As variáveis definidas com _var_ possuem as seguintes propriedades:
+- `NaN`: palavra reservada (*Not a Number*).
+ 
+  ## Declaração de variáveis
 
-* Devem ser declaradas antes do uso
-* Podem ser redeclaradas
-* Possuem escopo global ou de função
+**let** e **const** são substitutos para **var**, introduzidos no [ECMAScript6](https://www.w3schools.com/js/js_es6.asp) e proveem escopo de block para o Javascript. Antes do ES6 (2015), o JavaScript possuia apernas *escopo global* e *escopo de função*.
+
+### var[^var]
+
+As variáveis definidas com *var* possuem as seguintes propriedades:
+
+- Devem ser declaradas antes do uso
+- Podem ser redeclaradas
+- Possuem escopo global ou de função
 
 ECMAScript6 (ES6 / JavaScript 2015) encoraja a declaração de varáveis com **let**, de modo a evitar alguns possíveis problemas. O primeiro diz respeito ao escopo.
 
@@ -290,7 +290,7 @@ var n = 5
 console.log(n)    // 10
 ```
 
-No exemplo acima, vericamos que o valor impresso nas duas situações foi `10`. Isso ocorre porque _var_ permite a redeclaração de variáveis e redeclar uma variável dentro de um block iŕa redeclará-la fora do bloco. Sendo assim, o Javascript intepretou que as duas variáveis `n` eram na verdade, a mesma variável. Por isso o valor impresso foi o valor da última atribuição.
+No exemplo acima, vericamos que o valor impresso nas duas situações foi `10`. Isso ocorre porque *var* permite a redeclaração de variáveis e redeclar uma variável dentro de um block iŕa redeclará-la fora do bloco. Sendo assim, o Javascript intepretou que as duas variáveis `n` eram na verdade, a mesma variável. Por isso o valor impresso foi o valor da última atribuição.
 
 Outro inconveniente de `var` é o fato dele permitir o acesso externo de variáveis declaras dentro do bloco `{}`.
 
@@ -306,15 +306,15 @@ console.log(nome)    // 'Maria'
 
 Essa liberdade de acesso independente do escopo pode atrapalhar a legibilidade de código e causar erros de inconsistência no estado das variáveis (valor armazenado pela mesma), algo muito importante em linguagens de paradigma funcional.
 
-#### let[^3]
+### let [^let]
 
-As variáveis definidas com _let_ possuem as seguintes propriedades:
+As variáveis definidas com *let* possuem as seguintes propriedades:
 
-* Devem ser declaradas antes do uso
-* Não podem ser redeclaradas
-* Possuem escopo de bloco `{}`
+- Devem ser declaradas antes do uso
+- Não podem ser redeclaradas
+- Possuem escopo de bloco `{}`
 
-O uso de _let_ resolve os incoveniêntes apresentado pelo uso do _var_.
+O uso de *let* resolve os incoveniêntes apresentado pelo uso do *var*. 
 
 Exemplo:
 
@@ -328,7 +328,7 @@ let n = 5
 console.log(n)    // 5 (o valor foi mantido)
 ```
 
-O _let_ não permite a redeclaração de variáveis em um mesmo escopo de bloco `{}`. Sendo assim, o Javascript entende que, salvo terem o mesmo nome, as varáveis `n` são variáveis diferentes.
+O *let* não permite a redeclaração de variáveis em um mesmo escopo de bloco `{}`. Sendo assim, o Javascript entende que, salvo terem o mesmo nome, as varáveis `n` são variáveis diferentes.
 
 ```javascript
 {
@@ -337,7 +337,7 @@ O _let_ não permite a redeclaração de variáveis em um mesmo escopo de bloco 
 }
 ```
 
-O _let_ também não permite o acesso fora do escopo de bloco onde ele foi declarado.
+O *let* também não permite o acesso fora do escopo de bloco onde ele foi declarado.
 
 Exemplo:
 
@@ -351,14 +351,14 @@ console.log(nome)    // ReferenceError: nome is not defined
 
 A tentativa de acesso resultará em um `ReferenceError` indicando que a variável `nome` não foi definida.
 
-#### const
+### const [^const]
 
-As variáveis definidas com _const_ possuem as seguintes propriedades:
+As variáveis definidas com *const* possuem as seguintes propriedades:
 
-* Devem ser declaradas e inicializas com um valor antes do uso
-* Não podem ser redeclaradas
-* Não podem sofrer reatribuição
-* Possuem escopo de bloco `{}`
+- Devem ser declaradas e inicializas com um valor antes do uso
+- Não podem ser redeclaradas
+- Não podem sofrer reatribuição
+- Possuem escopo de bloco `{}`
 
 Exemplo:
 
@@ -369,13 +369,13 @@ PI = 3.14           // TypeError: Assignment to constant variable.
 const PI = 3.14     // SyntaxError: Identifier 'PI' has already been declared
 ```
 
-Sempre declaramos uma variável com _const_ quando sabemos que a _referência_ ao qual ela aponta não deve mudar. Recomenda-se o uso de _const_ quando declaramos:
+Sempre declaramos uma variável com *const* quando sabemos que a *referência* ao qual ela aponta não deve mudar. Recomenda-se o uso de *const* quando declaramos:
 
-* Um novo _array_
-* Um novo _object_
-* Uma nova _Function_
+- Um novo *array*
+- Um novo *object*
+- Uma nova *Function*
 
-O _const_ não define um uma valor constante. Ela define um referência constante a uma valor. Sendo assim, não podemos reatribuir outro _object_ a uma constante, mas podemos alterar os valores do mesmo.
+O *const* não define um uma valor constante. Ela define um referência constante a uma valor. Sendo assim, não podemos reatribuir outro *object* a uma constante, mas podemos alterar os valores do mesmo.
 
 Exemplo:
 
@@ -387,9 +387,9 @@ pessoa.nome = 'Joao'       // conseguimos alterar o atributo do object
 pessoa = {nome: 'Pedro'}  // TypeError: Assignment to constant variable.
 ```
 
-#### Hoisting[^4]
+### Hoisting [^hoisting]
 
-**Hoisting** é um comportamento padrão do Javascript de mover todas as declaração para o topo do escopo atual (para o topo do _script_ ou da função). Isso permite que variáveis possam ser utilizadas antes de serem declaradas.
+**Hoisting** é um comportamento padrão do Javascript de mover todas as declaração para o topo do escopo atual (para o topo do *script* ou da função). Isso permite que variáveis possam ser utilizadas antes de serem declaradas.
 
 ```javascript
 n = 10
@@ -412,7 +412,7 @@ var n
 .
 ```
 
-O Javascript somente executa o _hoisting_ para declarações, não inicializações:
+O Javascript somente executa o *hoisting* para declarações, não inicializações:
 
 ```javascript
 var a = 10
@@ -431,7 +431,7 @@ console.log(a + b)  // b is undefined
 var b = 2
 ```
 
-O Javascript irá indicar que `b` esta `undefined`. Isso ocorre porque somente a declaração `var b`, e não atribuição `= 2`, sofreu _hoisting_ para o topo do _script_. Em outras palavras, ocorre o comportamento semelhante ao seguinte código:
+O Javascript irá indicar que `b` esta `undefined`. Isso ocorre porque somente a declaração `var b`, e não atribuição `= 2`, sofreu *hoisting* para o topo do *script*. Em outras palavras, ocorre o comportamento semelhante ao seguinte código:
 
 ```javascript
 var a = 10    // inicializa 'a'
@@ -442,9 +442,9 @@ console.log(a + b)  // 'b' is undefined
 b = 2   // somente aqui atriuimos um valor a 'b'
 ```
 
-**Comportamento para o **_**let**_** e **_**const**_
+#### Comportamento para o *let* e *const*
 
-Variáveis declaradas com _let_ e _const_ sofrem _hoisting_ para o topo do bloco, mas não são inicializadas. Isso significa que o bloco sabe da existência das variáveis, mas não pode usá-las até que as mesmas sejam declaradas.
+Variáveis declaradas com *let* e *const* sofrem *hoisting* para o topo do bloco, mas não são inicializadas. Isso significa que o bloco sabe da existência das variáveis, mas não pode usá-las até que as mesmas sejam declaradas.
 
 Exemplo:
 
@@ -460,29 +460,29 @@ Exemplo:
 }
 ```
 
-**Boas práticas**
+#### Boas práticas
 
-O funcionamento do _hoisting_ pode causar erros dificeis de depurar caso não saibamos do seu funcionamento e resultar em estados inesperados nas variáveis. De modo a evitar o surgimento de bugs e melhorar a legibilidade do código, é uma boa prática _sempre_ declarar as variáveis no inicio de cada escopo e evitar usar variaveis que ainda não foram declaradas (o uso de _let_ e _const_ evita isso).
+O funcionamento do *hoisting* pode causar erros dificeis de depurar caso não saibamos do seu funcionamento e resultar em estados inesperados nas variáveis. De modo a evitar o surgimento de bugs e melhorar a legibilidade do código, é uma boa prática *sempre* declarar as variáveis no inicio de cada escopo e evitar usar variaveis que ainda não foram declaradas (o uso de *let* e *const* evita isso).
 
-#### Null e Undefined
+### Null e Undefined
 
-São valores denominados _**nullish**_.
+São valores denominados ***nullish***.
 
-**Undefined** é utilizado pelo Javascript quando temos uma variável que não foi inicializada com nenhum valor.
+**Undefined** é utilizado pelo Javascript quando temos uma variável que não foi inicializada com nenhum valor. 
 
 ```javascript
 var n
 console.log(n)    // sera retornado o tipo undefined
 ```
 
-**Null** é utilizado quando queremos evitar que uma variável fique como _undefined_ mas não desejamos atribui nenhum valor a ela.
+**Null** é utilizado quando queremos evitar que uma variável fique como *undefined* mas não desejamos atribui nenhum valor a ela.
 
 ```javascript
 var n = null
 console.log(n)    // sera retornado null
 ```
 
-O Javascript utiliza _cópia por referência_ para atribuição de valores. O mesmo não ocorre para tipos primitivos, onde é utilizada a _cópia por valor_.
+O Javascript utiliza *cópia por referência* para atribuição de valores. O mesmo não ocorre para tipos primitivos, onde é utilizada a *cópia por valor*.
 
 ```Javascript
 // Object simples
@@ -509,33 +509,34 @@ a = null
 console.log(a)    // null
 ```
 
-### Operadores
+## Operadores [^operators]
 
 Existem diferentes tipos de operadores em Javascripts e esses são separados nas seguintes categorias:
 
-* Operadores Aritméticos
-* Operadores de Atribuição
-* Operadores de Comparação
-* Operadores Lógicos
-* Operadores Condicionais
-* Operadores de Tipo
+- Operadores Aritméticos
+- Operadores de Atribuição
+- Operadores de Comparação
+- Operadores Lógicos
+- Operadores Condicionais
+- Operadores de Tipo
 
-#### Operadores Aritméticos
+### Operadores Aritméticos
 
 São utilizados para executar operações aritméticas de números.
 
-| Operador | Descrição                                                           |
-| -------- | ------------------------------------------------------------------- |
-| +        | Adição                                                              |
-| -        | Subtração                                                           |
-| \*       | Multiplicação                                                       |
-| \*\*     | Exponenciação ([ES2016](https://www.w3schools.com/js/js\_2016.asp)) |
-| /        | Divisão                                                             |
-| %        | Modulo (resto da divisão)                                           |
-| ++       | incremento                                                          |
-| --       | Decremento                                                          |
+| Operador | Descrição                                                          |
+| -------- | ------------------------------------------------------------------ |
+| +        | Adição                                                             |
+| -        | Subtração                                                          |
+| *        | Multiplicação                                                      |
+| **       | Exponenciação ([ES2016](https://www.w3schools.com/js/js_2016.asp)) |
+| /        | Divisão                                                            |
+| %        | Modulo (resto da divisão)                                          |
+| ++       | incremento                                                         |
+| --       | Decremento                                                         |
 
-#### Operadores de Atribuição
+
+### Operadores de Atribuição
 
 São utilizados para atribuir valores as variáveis.
 
@@ -555,11 +556,11 @@ x %= y    // x = x % y
 x **= y   // x = x ** y
 ```
 
-**Atribuição Via Desestruturação**
+#### Atribuição Via Desestruturação
 
-No Javascript, uma **atribuição via desestruturação** (do inglês, _destructuring assignment_), é uma expressão que permite extrair dados de _arrays_ ou _objects_ em variáveis distintas.
+No Javascript, uma **atribuição via desestruturação** (do inglês, *destructuring assignment*), é uma expressão que permite extrair dados de *arrays* ou *objects* em variáveis distintas.
 
-Exemplo com _object_:
+Exemplo com *object*:
 
 ```javascript
 const pessoa = {
@@ -587,7 +588,7 @@ console.log(nome)    // 'Maria'
 console.log(curso)   // 'Enfermagem'
 ```
 
-#### Operadores de Tipo
+### Operadores de Tipo
 
 | Operador   | Descrição                                                     |
 | ---------- | ------------------------------------------------------------- |
@@ -604,25 +605,25 @@ console.log(langs instanceof Object)   // true
 console.log(langs instanceof Number)   // false
 ```
 
-#### Operadores de Manipulação de Bits
+### Operadores de Manipulação de Bits
 
-São operadores de _bits_ utilizados para trabalhar com numeros de 32 bits. Qualquer valor númerico na operação é convertido em um número de 32 bits. O resultado é reconvertido para um `Number`.
+São operadores de *bits* utilizados para trabalhar com numeros de 32 bits. Qualquer valor númerico na operação é convertido em um número de 32 bits. O resultado é reconvertido para um `Number`.
 
 | Operador | Descrição            |
 | -------- | -------------------- |
 | &        | AND                  |
 | \|       | OR                   |
-| \~       | NOT                  |
+| ~        | NOT                  |
 | ^        | XOR                  |
 | <<       | left shift           |
 | >>       | right shift          |
 | >>>      | unsigned right shift |
 
-### Estruturas de Controle
+## Estruturas de Controle
 
-As estruturas de controle no Javascript são semelhantes ao encontrado em outras linguagens.
+As estruturas de controle no Javascript são semelhantes ao encontrado em outras linguagens. 
 
-#### Estrutura IF/ELSE[^5]
+### Estrutura IF/ELSE [^ifelse]
 
 Possui estrutura semelhante ao de outras linguagens com C e Java.
 
@@ -649,9 +650,9 @@ if (condicao)
     console.log('B')
 ```
 
-No exemplo acima, como não utilizamos chaves `{}` para o `IF`, o Javascript interpreta que o bloco de código do `IF` contem apenas a linha com o comando `console.log('A')`. Sendo assim, a _string_ `'A'` será impressa apenas se `condicao` for verdadeira. Por outro lado, a _string_ `'B'` sempre será impressa, independente do valor.
+No exemplo acima, como não utilizamos chaves `{}` para o `IF`, o Javascript interpreta que o bloco de código do `IF` contem apenas a linha com o comando `console.log('A')`. Sendo assim, a *string* `'A'` será impressa apenas se `condicao` for verdadeira. Por outro lado, a *string* `'B'` sempre será impressa, independente do valor.
 
-#### Estrutura Switch
+### Estrutura Switch [^switch]
 
 Funciona também de modo semelhate ao de outras linguagens.
 
@@ -672,9 +673,9 @@ switch(expressao) {
 
 É uma boa prática sempre utilizar o `default`, de modo a garantir o tratamento para todos os possíveis resultados de `expressao`.
 
-#### Estrutura While e Do While[^6]
+### Estrutura While e Do While [^while]
 
-Segue o mesmo funcionamento do _while_ e do _do while_ presente em outras linguagens.
+Segue o mesmo funcionamento do *while* e do *do while* presente em outras linguagens.
 
 Exemplo:
 
@@ -684,7 +685,7 @@ while (condicao) {
 }
 ```
 
-Exemplo:
+Exemplo: 
 
 ```javascript
 do {  
@@ -693,19 +694,19 @@ do {
 while (condicao)
 ```
 
-#### Estrutura FOR e FOR/IN
+### Estrutura FOR e FOR/IN
 
 O Javascript nos fornece dois tipos de estrutura de repetição **for**.
 
-* `for`: percorre um bloco de código, um determinado número de vezes.
-* `for/in`: percorre as propriedades de um objeto.
-* `for/of`: percorre os valores das propriedades um objeto .
+- `for`: percorre um bloco de código, um determinado número de vezes. 
+- `for/in`: percorre as propriedades de um objeto.
+- `for/of`: percorre os valores das propriedades um objeto .
 
 A seguir, temos alguns exemplos do uso da estrutura **for** , **for/in** e **for/of** e suas descrições.
 
-**FOR**
+#### FOR
 
-O **for** comum, encontrado em outras linguagens com `C` e `Java`. É utilizado para percorrer _arrays_.
+O **for** comum, encontrado em outras linguagens com `C` e `Java`.  É utilizado para percorrer *arrays*.
 
 Exemplo:
 
@@ -721,9 +722,9 @@ for (let i = 0; i < alunos.length; i++) {
 // -> 2 'Pedro'
 ```
 
-**FOR/IN**
+#### FOR/IN
 
-É utilizado para percorrer as propriedades enumeradas de um objeto. No caso de _arrays_, temos o seguinte comportamento.
+É utilizado para percorrer as propriedades enumeradas de um objeto. No caso de *arrays*, temos o seguinte comportamento.
 
 Exemplo:
 
@@ -740,9 +741,9 @@ for (let a in alunos) {
 // 2
 ```
 
-A variável `a` recebeu em cada interação, não o valor contido no _array_, mas o seu indice. O laço **for/in** interage sobre propriedades enumeradas de um objeto, na ordem original de inserção.
+A variável `a` recebeu em cada interação, não o valor contido no *array*, mas o seu indice. O laço **for/in** interage sobre propriedades enumeradas de um objeto, na ordem original de inserção. 
 
-Para _objects_, o **for/in** funciona retornando as propriedades dos objetos, e não seus valores.
+Para *objects*, o **for/in** funciona retornando as propriedades dos objetos, e não seus valores.
 
 Exemplo:
 
@@ -761,9 +762,9 @@ for (let p in pessoa) {
 //  -> idade = 20
 ```
 
-**FOR/OF**
+#### FOR/OF
 
-O **for/of** foi introduzido no [ECMAScript 6 (2015)](https://www.w3schools.com/js/js\_es6.asp) e é utilizado para interar através dos valores de objetos interaveis. Ele nos permite iterar através de estruturas de dados como _Arrays, Sets, Maps_ e _Strings_.
+O **for/of** foi introduzido no [ECMAScript 6 (2015)](https://www.w3schools.com/js/js_es6.asp) e é utilizado para interar através dos valores de objetos interaveis. Ele nos permite iterar através de estruturas de dados como *Arrays, Sets, Maps* e *Strings*.
 
 Exemplo:
 
@@ -780,7 +781,9 @@ for (let a of alunos) {
 // Pedro
 ```
 
-Se tentarmos utilizar o **for/of** com um _object_, como no código a seguir:
+
+
+Se tentarmos utilizar o **for/of** com um *object*, como no código a seguir:
 
 ```javascript
 // Percorrendo um object
@@ -798,12 +801,12 @@ for (let p of Pessoa) {
 
 Isso ocorre porque o objeto `Pessoa` não implementa a propriedade que permite a iteração.
 
-#### Break e Continue
+### Break e Continue
 
-Ainda cobrindo a área de _loops_, temos dois comandos muito úteis:
+Ainda cobrindo a área de *loops*, temos dois comandos muito úteis:
 
-* `break`: comando que "pula fora" do _loop_.
-* `continue`: comando que "pula" uma iteração do _loop_.
+- `break`: comando que "pula fora" do *loop*.
+- `continue`: comando que "pula" uma iteração do *loop*.
 
 Exemplo **break**:
 
@@ -826,7 +829,7 @@ for (let a of alunos) {
 // Joao
 ```
 
-No exemplo acima, percorremos o _array_ de nomes, imprimindo cada um deles até encontrarmos um nome que começa com a leta `P`. Nesse caso, utilizamos o `break` para encerrar o _loop_ **for**.
+No exemplo acima, percorremos o *array* de nomes, imprimindo cada um deles até encontrarmos um nome que começa com a leta `P`. Nesse caso, utilizamos o `break` para encerrar o *loop* **for**.
 
 Exemplo **continue**:
 
@@ -850,16 +853,16 @@ for (let a of alunos) {
 // Mel
 ```
 
-No exemplo acima, também percorremos o _array_ de nomes, imprimindo cada um deles até encontrarmos um nome que começa com a leta `P`. Nesse caso, utilizamos o `continue` para pular para o próximo valor presente no _array_.
+No exemplo acima, também percorremos o *array* de nomes, imprimindo cada um deles até encontrarmos um nome que começa com a leta `P`. Nesse caso, utilizamos o `continue` para pular para o próximo valor presente no *array*.
 
-### Tratamento de Erros
+## Tratamento de Erros [^errors]
 
 O tratamento de erros em Javascript possui as seguintes palavras chaves:
 
-* `try`: define o bloco de código a ser executado (_obrigatório_)
-* `catch`: define o bloco de código que irá tratar o erro (_obrigatório_)
-* `finally`: define um bloco de código que será executado indeferente do resultado (_opcional_)
-* `throw`: utilizado para disparar um erro criado pelo usuário.
+- `try`: define o bloco de código a ser executado (*obrigatório*)
+- `catch`: define o bloco de código que irá tratar o erro (*obrigatório*)
+- `finally`: define um bloco de código que será executado indeferente do resultado (*opcional*)
+- `throw`: utilizado para disparar um erro criado pelo usuário.
 
 Exemplo:
 
@@ -883,9 +886,9 @@ try {
 }
 ```
 
-### Array
+## Array [^array]
 
-O _array_ é utilizado para armazenar multiplos valores em uma unica variável. Funciona como uma lista e apresenta os métodos mais conhecidos desse tipo de estrutura de dados.
+O *array* é utilizado para armazenar multiplos valores em uma unica variável. Funciona como uma lista e apresenta os métodos mais conhecidos desse tipo de estrutura de dados.
 
 Exemplo:
 
@@ -921,7 +924,7 @@ lista.unshift('Python')  // ['Python', 4.5, 'abc', 0]
 lista.splice(1, 2)  // [4.5, 'abc']
 ```
 
-Quando atribuimos um valor a um indice que não existe no _array_, o Javascript irá estender o _array_, o preenchendo com _undefined_ até o indice desejado, que receberá o valor que foi fornecido.
+Quando atribuimos um valor a um indice que não existe no *array*, o Javascript irá estender o *array*, o preenchendo com *undefined* até o indice desejado, que receberá o valor que foi fornecido.
 
 Exemplo:
 
@@ -936,9 +939,10 @@ console.log(lista[4])    // undefined
 console.log(lista[5])    // true
 ```
 
-#### Array Destructuring
 
-É um modo prático de extrair valores de um _array_ e atribui-los a variáveis distintas.
+### Array Destructuring
+
+É um modo prático de extrair valores de um *array* e atribui-los a variáveis distintas.
 
 Exemplo:
 
@@ -960,13 +964,13 @@ console.log(b)    // 'x'
 
 ```
 
-### Rest e Spread
+## Rest e Spread
 
 O Javascript possui o operador `...`, que facilita trabalhar com lista que não conhecemos a quantidade de elementos. Dependendo do contexto de uso (lado esquerdo ou direito da atribuição), é chamado de operador `rest` ou operador `spread`.
 
-#### Rest Elements
+### Rest Elements
 
-Quando o operador `...` aparece do lado esquerdo da atribuição, é denominado como operador `rest`. Este operador coleta zero ou mais valores, armazenando-os em um _array_.
+Quando o operador `...` aparece do lado esquerdo da atribuição, é denominado como operador `rest`. Este operador coleta zero ou mais valores, armazenando-os em um *array*.
 
 ```javascript
 // Separando valores em particular
@@ -978,17 +982,17 @@ console.log(resto)  // [3, 4, 5]
 
 ```
 
-O _array_ `resto` que aparece acompanhada do operador é denominado `rest elements`.
+O *array* `resto` que aparece acompanhada do operador é denominado `rest elements`.
 
-> O _elemento `rest`_ deve ser o último elemento do operação de _destructurig_.
+> O *elemento `rest`* deve ser o último elemento do operação de *destructurig*.
 
 ```javascript
 const [...resto, a, b] = [1, 2, 3, 4, 5]
 ```
 
-O exemplo acima irá apresentar um `SyntaxError`, porque o _rest element_ não esta no final da operação de _destructuring_.
+O exemplo acima irá apresentar um `SyntaxError`, porque o *rest element* não esta no final da operação de *destructuring*.
 
-#### Rest Properties
+### Rest Properties
 
 Também podemos aplicar o mesmo conceito do operador `rest` para propriedades de objetos.
 
@@ -1006,7 +1010,7 @@ console.log(endereco)   // {rua: 'Rua 123', cidade: 'Sao Paulo'}
 
 ```
 
-#### Rest Parameters
+### Rest Parameters
 
 O operador `rest` também pode ser utilizado como parâmento de uma função, possibilitando que passemso um número variável de parametros durante a chamada da função.
 
@@ -1019,11 +1023,11 @@ printName('Maria')       // Maria
 printName('Joao', 'Paulo')  // Joao Paulo
 ```
 
-### Spread
+## Spread
 
-#### Spread Elements
+### Spread Elements
 
-Quando o operador `...` aparece do lado direto do operador de atribuição, ele é denominado operador `spread`. Esse operador expande um _array_ em uma lista de elementos e, diferente do operador `rest`, pode ser usado mais de uma vez e em qualquer lugar da expressão.
+Quando o operador `...` aparece do lado direto do operador de atribuição, ele é denominado operador `spread`. Esse operador expande um *array* em uma lista de elementos e, diferente do operador `rest`, pode ser usado mais de uma vez e em qualquer lugar da expressão.
 
 ```javascript
 const resto = [3, 4, 5]
@@ -1032,8 +1036,7 @@ const a = [1, 2, ...resto]
 
 console.log(a)   // [1, 2, 3, 4, 5]
 ```
-
-#### Spread Properties
+### Spread Properties
 
 Assim como o operador `rest`, também podemos utilizar o `spread` sobre propriedades de objetos.
 
@@ -1048,11 +1051,11 @@ endereco = {...endereco, estado: 'SP'}
 console.log(endereco)   // {rua: 'Rua 123', cidade: 'Sao Paulo', estado: 'SP'}
 ```
 
-### Array Analysis
+## Array Analysis
 
-São método nativos para analisar o conteúdo de um array. A maioria desses métodos recebe uma _function_ como parâmetro (denominada _predicate_) e devolve _true_ ou _false_ como parâmetro. Normalmente são utilizadas no lugar de laços _for_.
+São método nativos para analisar o conteúdo de um array. A maioria desses métodos recebe uma *function* como parâmetro (denominada *predicate*) e devolve *true* ou *false* como parâmetro. Normalmente são utilizadas no lugar de laços *for*.
 
-**include**
+#### include
 
 Verifica se um array contem um determinado valor.
 
@@ -1065,9 +1068,9 @@ lista.include('one');  // true
 lista.include(4);      // false
 ```
 
-**every**
+#### every
 
-Verifica se todos os elementos do array cumprem o requisito analisado pela _function_, retornando _true_ ou _false_.
+Verifica se todos os elementos do array cumprem o requisito analisado pela *function*, retornando *true* ou *false*.
 
 Exemplo:
 
@@ -1077,11 +1080,11 @@ const pares = [2, 4, 6, 8];
 pares.every((n) => n % 2 == 0)  // true (todos sao pares)
 ```
 
-> Funcionamento semelhante ao _all()_ em Python.
+> Funcionamento semelhante ao *all()* em Python.
 
-**some**
+#### some
 
-Verifica se pelo menos um dos elementros do array cumpre o requisito analisado pela função, retornando _true_ ou _false_.
+Verifica se pelo menos um dos elementros do array cumpre o requisito analisado pela função, retornando *true* ou *false*.
 
 Exemplo:
 
@@ -1091,9 +1094,8 @@ const lista = [1, 2, 4, 6];
 lista.some((n) => n % 2 != 0); // true (o numero 1 é impar)
 ```
 
-> Funcionamento semelhante ao _any()_ em Python.
-
-**find**
+> Funcionamento semelhante ao *any()* em Python.
+#### find
 
 Retorna o valor do primeiro elemento que satisfaça a condição analisada pela função.
 
@@ -1105,9 +1107,9 @@ const lista = [1, 2, 3, 4]
 lista.find((n) => n % 3 == 0); // 3 (primeiro numero divisivel por 3)
 ```
 
-**findIndex**
+#### findIndex
 
-Funciona de forma semelhante ao _find()_, porém retorna o indice do elemento ao invés do elemento em si.
+Funciona de forma semelhante ao *find()*, porém retorna o indice do elemento ao invés do elemento em si.
 
 Exemplo:
 
@@ -1117,11 +1119,11 @@ const lista = [1, 2, 3, 4];
 lista.findIndex((n) => n % 3 == 0);  // 2 (indice do numero 3)
 ```
 
-#### Array Transformations
+### Array Transformations
 
-A classe Array possui muitos metodos para manipulação de valores. Esses métodos são denominados _puros_ quando não alteram o array original. Quando os valores do array original são alterados, a função é denominada _impura_.
+A classe Array possui muitos metodos para manipulação de valores. Esses métodos são denominados *puros* quando não alteram o array original. Quando os valores do array original são alterados, a função é denominada *impura*.
 
-Exemplo função _pura_:
+Exemplo função *pura*:
 
 ```javascript
 const lista = [1, 2, 3, 4];
@@ -1129,7 +1131,7 @@ const lista = [1, 2, 3, 4];
 lista.filter(n => n % 2 == 0);  // [2, 4]
 ```
 
-Exemplo função _impura_:
+Exemplo função *impura*:
 
 ```javascript
 const lista =  [1, 2, 3, 4];
@@ -1137,15 +1139,15 @@ const lista =  [1, 2, 3, 4];
 lista.reverse(); // [4, 3, 2, 1]
 ```
 
-### Object[^7]
+## Object [^obj]
 
-**Object** é uma _function_ do Javascript. É utilizado para armazenar coleços de _chave: valor_.
+**Object** é uma *function* do Javascript. É utilizado para armazenar coleços de *chave: valor*. 
 
-> Não confundir _object_ com o formato _JSON(Javascript Object Notation)_. Apesar de serem parecidos, o **JSON** é um formato textual e aceita apenas aspas duplas como delimitador de texto, enquanto **Object** é uma notação literal para objetos e aceita tanto aspas simples como aspas duplas para delimitar textos
+> Não confundir *object* com o formato *JSON(Javascript Object Notation)*. Apesar de serem parecidos, o **JSON** é um formato textual e aceita apenas aspas duplas como delimitador de texto, enquanto **Object** é uma notação literal para objetos e aceita tanto aspas simples como aspas duplas para delimitar textos
 
-O exemplo a seguir cria um _object_ com 2 propriedades _chave: valor_.
+O exemplo a seguir cria um *object* com 2 propriedades *chave: valor*.
 
-> O _object_ funciona de modo semelhante ao _dict_ do Python.
+> O *object* funciona de modo semelhante ao *dict* do Python.
 
 Exemplo:
 
@@ -1175,7 +1177,7 @@ aluno.hasOwnProperty('idade') // true
 Object.prototype.hasOwnProperty.call(aluno, 'idade')
 ```
 
-Podemos também utilizar um _object_ como base para a criaçãoi de outro _objeto_.
+Podemos também utilizar um *object* como base para a criaçãoi de outro *objeto*.
 
 Exemplo:
 
@@ -1188,9 +1190,9 @@ const objA = {
 const objC = { ...objA, c: 3} // novo object {a: 1, b: 2, c:3}
 ```
 
-### Funções
+## Funções [^function]
 
-No Javascript, funções são consideradas **Objetos de Primeira Classe** (do inglês, _First Class Object_). Isso significa que as funções tem papel central na linguagem e que podemos tratá-la com um dado. Como consequência disso, tanto **object** como **class** também sao do tipo _function_ e cada função instânciada é portanto um objeto da classe **Function**.
+No Javascript, funções são consideradas **Objetos de Primeira Classe** (do inglês, *First Class Object*). Isso significa que as funções tem papel central na linguagem e que podemos tratá-la com um dado. Como consequência disso, tanto **object** como **class** também sao do tipo *function* e cada função instânciada é portanto um objeto da classe **Function**.
 
 ```javascript
 typeof Object            // function
@@ -1207,11 +1209,11 @@ const foo = function () {
 consolo.log(foo())    // 'Hello World'
 ```
 
-#### Passagem de parâmetros
+### Passagem de parâmetros
 
-Assim como em outras linguagens, uma _function_ pode aceitar um conjunto de parâmetros de qualquer tipo de modo a executar seu código. Entretanto, em **Javascript**, passar mais ou menos argumentos do que a quantidade de parâmetros que a _function_ recebe não dispara nenhum erro.
+Assim como em outras linguagens, uma *function* pode aceitar um conjunto de parâmetros de qualquer tipo de modo a executar seu código. Entretanto, em **Javascript**, passar mais ou menos argumentos do que a quantidade de parâmetros que a *function* recebe não dispara nenhum erro.
 
-> Parâmetros e retornos em Javascript são _opcionais_.
+> Parâmetros e retornos em Javascript são *opcionais*.
 
 Exemplo:
 
@@ -1225,7 +1227,7 @@ imprimirSoma(2)       // NaN (o valor do parâmetro 'b' é undefined)
 imprimirSoma(2, 3, 4, 5)   // 5 (os argumentos 4 e 5 são ignorados)
 ```
 
-Podemos atribuir um valor _default_ para os parâmetros, de modo a evitar que os mesmo fiquem como _undefined_ se nenhum argumento correspondente não forem passados para a _function_.
+Podemos atribuir um valor *default* para os parâmetros, de modo a evitar que os mesmo fiquem como *undefined* se nenhum argumento correspondente não forem passados para a *function*.
 
 Exemplo:
 
@@ -1258,9 +1260,9 @@ imprimir(function () {
 // 'Hello World!'
 ```
 
-#### Retorno de função
+### Retorno de função
 
-Uma _function_ pode retornar valores de quaiquer tipos, porém pode retornar apenas um valor por vez. Uma _function_ que não retorna valor ou que possui o _return_ ausente, retorna _undefined_. No Javascript não existem _return_ implicitos.
+Uma *function* pode retornar valores de quaiquer tipos, porém pode retornar apenas um valor por vez. Uma *function* que não retorna valor ou que possui o *return* ausente, retorna *undefined*. No Javascript não existem *return* implicitos.
 
 Exemplo:
 
@@ -1279,9 +1281,9 @@ function imprimirFoo2(foo) {
 imprimitFoo2('texto')  // retorna undefined
 ```
 
-#### Função Anônima
+### Função Anônima
 
-Como funções são membros de primeira classe\*, também podemos atribuí-las a variáveis. Esse recurso é muito util em diversas funções do Javascript que muitas das vezes, devido a sua natureza funcional, recebem outras funções como parâmetro.
+Como funções são membros de primeira classe*, também podemos atribuí-las a variáveis. Esse recurso é muito util em diversas funções do Javascript que muitas das vezes, devido a sua natureza funcional, recebem outras funções como parâmetro.
 
 Exemplo:
 
@@ -1293,7 +1295,7 @@ const imprimirSoma = function (a, b) {
 imprimirSoma(2, 3)    // 5
 ```
 
-Também podemos atribuir uma função como uma _property_ de um objeto.
+Também podemos atribuir uma função como uma *property* de um objeto.
 
 Exemplo:
 
@@ -1309,9 +1311,9 @@ const aluno = {
 aluno.curso()  // Retorna 'Engenharia'
 ```
 
-**Arrow Functions**
+#### Arrow Functions
 
-As funções anônimas também podem ser escritas usando _arrow functions_. Essa função foi introduzida no ES6 e possibilita uma notação mais exuta da função.
+As funções anônimas também podem ser escritas usando *arrow functions*. Essa função foi introduzida no ES6 e possibilita uma notação mais exuta da função.
 
 Exemplo:
 
@@ -1328,11 +1330,11 @@ const imprimirSoma = (a, b) => console.log(a + b)
 imprimirSoma(2, 3)    // 5
 ```
 
-#### Função Callback[^8]
+### Função Callback [^callback]
 
-São funções passadas como argumento para outras funções e é executada dentro dessa função para completar algum tipo de rotina. Função de _callback_ são normalmente utilizadas em de assincrono.
+São funções passadas como argumento para outras funções e é executada dentro dessa função para completar algum tipo de rotina. Função de *callback* são normalmente utilizadas em de assincrono.
 
-Exemplo:
+Exemplo: 
 
 ```javascript
 function printHello() {
@@ -1344,9 +1346,9 @@ button.addEventListener(printHello);
 
 No exemplo acima, quando o botão `button` for pressionado, a função `printHello` será invocada e mensagem `Hello World!` será impresso.
 
-#### Função Nested (_nested function_) \[^nested-functio]
+### Função Nested (*nested function*) [^nested-functio]
 
-Uma função é denominada _nested_ (ou aninhada), quando é declara dentro de outra função. Normalmente é utilizada de modo a centralizar um código que ocorre repetidas vezes dentro do escopo da função ao qual ela foi inserida.
+Uma função é denominada *nested* (ou aninhada), quando é declara dentro de outra função. Normalmente é utilizada de modo a centralizar um código que ocorre repetidas vezes dentro do escopo da função ao qual ela foi inserida.
 
 ```javascript
 function printHello(firstName, lastName) {
@@ -1360,234 +1362,168 @@ function printHello(firstName, lastName) {
 }
 ```
 
-### Closure[^9]
 
-Uma _closure_ é uma função contruída com referências ao escopo externo a ela, o que permite acessar essas referências. Esse padrão permite que variáveis de um escopo externo seja utilizados dentro de um escopo que esteja alinhado a ele.
+## Prototypes & Classes
 
-Em Jajavscript, cada funcão executada, bloco de código `{}` e script (global) possuem um objeto interno denominado como _Lexical Enviromnent_. Esse _Lexical Enviroment_ possui duas propriedades principais:
+Javascript permite programação orientada a objetos utilizando herança baseada em prototipos.
 
-* Um objeto que armazena todas as variáveis locais como propriedades, bem como o valor de _this_;
-* Uma referência para outro _Lexical Enviromnent_ mais externo a ele.
+### Prototype Syntax
 
-Diferente de outros objetos do Javascript, o _Lexical Enviromnent_ existe apenas internamente. Não temos acesso a ele em nosso código de modo que possamos manipulá-lo diretamente.
+#### Constructor Function
 
-#### _Lexical Enviromnent_ para variáveis
-
-No caso de variáveis, elas nada mais são que propriedades do _Lexical Enviromnent_. Mudar seu valor significa mudar o valor dessas propriedades. Segue um exemplo de criação de variável no escopo do _script_ (global).
-
-Exemplo:
+Quando uma *function* é utilizada como *template* (*class*), ela é chamada *contructor function* (o nome da função deve seguir o padrão *CamelCase* para esse caso). As instâcias (objetos) derivados do template utilizam *new* para invocar o contrutor do template.
 
 ```javascript
-/* Inicio da execucao: aqui e criado o Lexical Enviromnent do script
-
-Lexical Enviromnent:
-   - name: <uninitialized>
-   - outer: null
-*/
-
-let name;
-/*
-Lexical Enviromnent:
-   - name: undefined
-   - outer: null
-*/
-
-name = 'Maria'
-/*
-Lexical Enviromnent:
-   - name: 'Maria'
-   - outer: null
-*/
-```
-
-No exemplo acima, podemos perceber dois detalhes interessantes:
-
-* A variável `name` já era conhecida pelo _scritp_ antes de ser declarada. Como visto na sessão _hoisting_.
-* A propriedade _outer_ esta como _null_ devido ao fato do escopo do código ser o escopo do _script_ ou global.
-
-#### _Lexical Enviromnent_ para funcões
-
-Diferente do que ocorre com variáveis, a declaração de uma funçãio é totalmente inicializada.
-
-Exemplo:
-
-```javascript
-/* Inicio da execucao: aqui e criado o Lexical Enviromnent do script
-
-Lexical Enviromnent:
-   - name: <uninitialized>
-   - printName: function
-   - outer: null
-*/
-
-let name;
-
-function printName() {
-    console.log(name);
+function Car() {
+   // ...
 }
 
-/*
-Lexical Enviromnent:
-   - name: undefined
-   - printName: function
-   - outer: null
-*/
+const car1 = new Car();
+const car2 = new Car();
 ```
 
-Esse comportamente não ocorre para casos envolvendo expressões com funções, como por exemplo:
+Os objetos criados possuem uma *property* interna denominada *prototype*. Essa *property* é uma relação com a *contructor functon*. Ela armazena uma referência para a chave *prototype* da *contructor function*.
+
+#### Campos e métodos
+
+Os campos de uma *contructor function* podem ser acessadas utilizando o *this*.
 
 ```javascript
-let print = printName(name) { ... }
+function Car(color) {
+	this.color = color;
+}
+
+const car = new Car('azul');
+console.log(car.color);   // azul
 ```
 
-O _Lexical Enviromnent_ do escopo interno dasd funções é criado somente no momento da execução das funcões, no inicio da sua chamada. Ainda seguindo o exemplo anterior, ao chamarmos a função `printName`, teremos o seguinte caso:
+Os métodos podém ser acessados usando a *property* **prototype** da *constructor function*.
 
 ```javascript
-/* Inicio da execucao: aqui e criado o Lexical Enviromnent do script
-
-Lexical Enviromnent (global):
-   - name: <uninitialized>
-   - printName: function
-   - outer: null
-*/
-
-let name = 'Maria';
-
-function printName() {
-    console.log(name);
+function Car(color) {
+	this.color = color;
+	this.engineRunning = false;
 }
 
-/*
-Lexical Enviromnent (global):
-   - name: 'Maria'
-   - printName: function
-   - outer: null
-*/
+Car.prototype.start = function () {
+	this.engineRunning = true;
+}
 
-printName();
-/*
-Lexical Enviromnent (global):
-   - name: 'Maria'
-   - printName: function
-   - outer: null
-
-Lexical Enviromnent (printName):
-   - outer: 'Lexical Enviromnent (global)'
-
-*/
+const car = new Car('azul');
+car.start();
 ```
 
-Ao tentar acessar a variável `name`, a função `printName` irá buscar a variável `name` em seu próprio _Lexical Enviroment_. Não a encontrado, ele irá buscar no _Lexical Enviromnent_ externo imediato _outer_, e assim sucessivamente até o alcançar o _Lexical Envirmnent_ global do _script_. Caso não encontre a variável, o Javascript retornará um erro.
+### Class Syntax
 
-Umam variável é atualizada no _Lexical Enviromnent_ ao qual ela pertence.
-
-Exemplo:
+Nas versões mais recentes, Javascript trouxe a palavra chave *class*, utilizada para criação de templates como o mesmo funcionamento de outras linguagens 
+Orientadas a Objetos.
 
 ```javascript
-function makeCounter() {
-    let counter = 0;
+class Car {
 
-    return function() {
-        return counter++;
-    }
+	contructor(color) {
+		this.color = color;
+		this.startEngine = false;
+	}
+
+	start() {
+		this.startEngine = true;
+	}
+
+	addGas(litre) {
+		// ...
+	}
 }
 
-let counter = makeCounter();
-
-/*
-Lexical Enviromnent (global):
-   - counter: makeCounter()
-   - makeCounter: function
-   - outer: null
-
-Lexical Enviromnent (makeCounter):
-   - outer: 'Lexical Enviromnent (global)'
-   - counter: 0
-*/
-
-console.log(counter());   // 1
-
-/*
-Lexical Enviromnent (counter()):
-   - outer: 'Lexical Enviromnent (makeCounter)'
-   - counter: 1
-*/
-
-console.log(counter());   // 2
-
-/*
-Lexical Enviromnent (counter()):
-   - outer: 'Lexical Enviromnent (makeCounter)'
-   - counter: 2
-*/
-
-console.log(counter());   // 3
+const car = new Car('red');
+car.start();
 ```
 
-#### Garbage Collection
+Mesmo com a utilização de classes, Javascript ainda continua sendo uma linguagem baseadas em protótipos.
 
-O Javascript possui um um _garbage collector_ que remove todas as referências do _Lexical Enviromnent_ de uma função após a mesma ser executada. Isso ocorre porque após a execução não há mais referências a ela. Entretanto, caso a função possua uma outra função aninhada a ela, o _Lexical Enviromnent_ será mantido, porque o _Lexical Enviromnent_ dessa função aninhada ainda faz referência ao _Lexical Enviromnent_ da função superior a ela.
-
-Exemplo:
+Os *get* e *set* de outras linguagens OO também estão presentes.
 
 ```javascript
-// Funcao simples
-function printHello() {
-    console.log('Hello!')
+class Car {
+
+	contructor(color) {
+		this._color = color; // atributos privados
+		this._gas = 100;
+	}
+
+	// Consulta de atributo
+	get gas() {
+		return this._gas;
+	}
+
+	// Atribuicao de valor
+	// podemos bloquear a atribuicao por aqui
+	set gas(value) {
+		this._gas = value;
+	}
 }
 
-// Apos a execucao, o Lexical Enviromnent dessa funcao
-// sera desalocado da memoria
-printHello();
+const car = new Car('red');
 
+console.log(car.gas); // 100
 
-// Funcao com outra funcao interna
-function makeCounter() {
-    let counter = 0;
-
-    return function() {
-        return counter++;
-    }
-}
-
-/* Apos a execucao, o Lexical Enviromnent de 'MakeCounter' 
-   ainda permacera em memoria porque ele ainda e apontado pela
-   propriedade 'outer' da funcao interna e ainda é referenciada
-   variavel 'counter'
-*/
-let counter = makeCounter();
-
-/*
-Lexical Enviromnent (makeCounter):
-   - outer: 'Lexical Enviromnent (global)'
-   - counter: 0
-
-Lexical Enviromnent (function interna):
-   - outer: : 'Lexical Enviromnent (makeCounter)'
-*/
-
-counter();
+car.gas = 0;
 ```
 
-### Referências
+#### Herança de classes
 
-1. https://www.w3schools.com/jsref/jsref\_obj\_math.asp
-2. https://www.w3schools.com/jsref/jsref\_obj\_string.asp
+Podemos também utilizar herança entre as classes utilizando a palavra chave *extends*.
 
-[^1]: https://www.w3schools.com/jsref/jsref\_obj\_number.asp
+```javascript
 
-[^2]: https://www.w3schools.com/jsref/jsref\_obj\_boolean.asp
+class Car {
 
-[^3]: https://www.w3schools.com/js/js\_let.asp
+	contructor(color) {
+		this.color = color;
+		this.gas = 100;
+	}
 
-[^4]: https://www.w3schools.com/js/js\_hoisting.asp
+	addGas(value) {
+		this.gas = value;
+	}
+}
 
-[^5]: https://www.w3schools.com/js/js\_if\_else.asp
+class Ferrari extends Car {
 
-[^6]: https://www.w3schools.com/js/js\_loop\_while.asp
+	contructor(color) {
+		super(color);
+	}
 
-[^7]: https://www.w3schools.com/jsref/jsref\_obj\_object.asp
+	addGas(value) {
+		super.addGas();
+		console.log('Add gas');
+	}
+}
 
-[^8]: https://developer.mozilla.org/en-US/docs/Glossary/Callback\_function
+const car = new Ferrari('red');
+car.addGas(50);
 
-[^9]: https://javascript.info/closure
+```
+
+## Referências
+
+[^number]: https://www.w3schools.com/jsref/jsref_obj_number.asp
+[^math]: https://www.w3schools.com/jsref/jsref_obj_math.asp
+[^IEEE]: https://en.wikipedia.org/wiki/IEEE_754
+[^string]: https://www.w3schools.com/jsref/jsref_obj_string.asp
+[^boolean]: https://www.w3schools.com/jsref/jsref_obj_boolean.asp
+[^array]: https://www.w3schools.com/jsref/jsref_obj_array.asp
+[^obj]: https://www.w3schools.com/jsref/jsref_obj_object.asp
+[^var]: https://www.w3schools.com/jsref/jsref_var.asp
+[^let]: https://www.w3schools.com/js/js_let.asp
+[^const]: https://www.w3schools.com/js/js_const.asp
+[^hoisting]: https://www.w3schools.com/js/js_hoisting.asp
+[^operators]: https://www.w3schools.com/js/js_operators.asp
+[^coales]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+[^errors]: https://www.w3schools.com/js/js_errors.asp 
+[^ifelse]: https://www.w3schools.com/js/js_if_else.asp
+[^switch]: https://www.w3schools.com/js/js_switch.asp
+[^while]: https://www.w3schools.com/js/js_loop_while.asp
+[^function]: https://www.w3schools.com/js/js_functions.asp
+[^callback]: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+[^nested-function]: https://javascript.info/closure#nested-functions
