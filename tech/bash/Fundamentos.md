@@ -1,8 +1,8 @@
+# Fundamentos
 
 Embora muita das veze utilizados juntos, os termos `shell` e `bash` não são a mesma coisa.
 
-O termo `shell` refere-se a um programa que fornece uma interface de linha de comando para interagir com o Sistema Operacional. 
-O termo `Bash (Bourne-Again Shell)`é um dos Unix/Linux *shells* mais comuns e utilizados.
+O termo `shell` refere-se a um programa que fornece uma interface de linha de comando para interagir com o Sistema Operacional. O termo `Bash (Bourne-Again Shell)`é um dos Unix/Linux _shells_ mais comuns e utilizados.
 
 ```mermaid
 flowchart LR
@@ -15,9 +15,9 @@ Todo script bash possui a extensão `.sh` e possui a`shebang (#!)` na primeira l
 #!/bin/bash
 ```
 
-*shebang* indica qual *shell* sera utilizado para executar o script. 
+_shebang_ indica qual _shell_ sera utilizado para executar o script.
 
-# Variáveis
+## Variáveis
 
 As variáveis não devem possuir espaço entre o nome da variável, o simbolo de atribuição e o seu valor.
 
@@ -46,8 +46,7 @@ echo "${NAME}"  # Maria
 echo "${#NAME}"   # 5
 ```
 
-É sempre uma boa ideia usar aspas "aspas" ao redor das variáveis para manter os espaços em branco e evitar problemas com variáveis vazias.
-Todas as variáveis são consideradas globais. Variáveis locais são precedidas por `local`. 
+É sempre uma boa ideia usar aspas "aspas" ao redor das variáveis para manter os espaços em branco e evitar problemas com variáveis vazias. Todas as variáveis são consideradas globais. Variáveis locais são precedidas por `local`.
 
 É possível armazenar o valor de um comando dentro de uma variável, inserindo o comando entre `$(...)`.
 
@@ -63,14 +62,14 @@ unset DATA
 
 O Bash tambem possui variáveis nativas. São elas:
 
-- `$?`: valor retornado pelo ultimo comando executado
-- `$$`: o `PID` do script
-- `$0`: o nome do script
-- `$1`, `$2` ... `$9`: argumentos que foram passados para o script, na sua execução
-- `$@`: todos os argumentos fornecidos ao script
-- `$#`: numero de argumentos fornecidas ao script
+* `$?`: valor retornado pelo ultimo comando executado
+* `$$`: o `PID` do script
+* `$0`: o nome do script
+* `$1`, `$2` ... `$9`: argumentos que foram passados para o script, na sua execução
+* `$@`: todos os argumentos fornecidos ao script
+* `$#`: numero de argumentos fornecidas ao script
 
-# Expressões Aritméticas
+## Expressões Aritméticas
 
 Podemos utilizar a expressão `$((...))` para realizar operações matemáticas:
 
@@ -80,39 +79,40 @@ Podemos utilizar a expressão `$((...))` para realizar operações matemáticas:
 echo $((1 + 1))   # => 2
 ```
 
-# Estrutura de controle, arrays e loops
+## Estrutura de controle, arrays e loops
 
-## Comando `test`
+### Comando `test`
 
 O comando `test` do shell permite vários tipos de testes muito uteis com valores numéricos, strings e arquivos. Temos os seguintes operadores para o `test`:
 
-### Números
+#### Números
 
-- `-ne`: not equal (diferente)
- - `-lt`: less than (menor que)
-- `-gt`: greater than (maior que)
-- `-le`: less than or equal to (menor ou igual que)
-- `-ge`: greater than or equal to (maior ou igual que)
-- `-eq`: equal (igual a)
+* `-ne`: not equal (diferente)
+* `-lt`: less than (menor que)
+* `-gt`: greater than (maior que)
+* `-le`: less than or equal to (menor ou igual que)
+* `-ge`: greater than or equal to (maior ou igual que)
+* `-eq`: equal (igual a)
 
-### Strings
+#### Strings
 
-- `==`: string é igual
-- `!=`: string é diferente
-- `-n`: string é não nula
-- `-z`: string nula ou vazia
+* `==`: string é igual
+* `!=`: string é diferente
+* `-n`: string é não nula
+* `-z`: string nula ou vazia
 
-### Arquivos
+#### Arquivos
 
-- `-d`: é um diretório
-- `-f`: é um arquivo comum
-- `-r`: o arquivo tem permissão de leitura
-- `-w`: o arquivo tem permissão de escrita
-- `-s`: o tamanho do arquivo é maior que zero (arquivo não vazio)
+* `-d`: é um diretório
+* `-f`: é um arquivo comum
+* `-r`: o arquivo tem permissão de leitura
+* `-w`: o arquivo tem permissão de escrita
+* `-s`: o tamanho do arquivo é maior que zero (arquivo não vazio)
 
 Ainda existem outros operadores para arquivos, porém esses são os mais usados.
 
-## IF
+### IF
+
 Aqui podemos utilizar `if` como em outras linguagens. O `if` possui a seguinte estrutura:
 
 ```bash
@@ -126,6 +126,7 @@ else
     # codigo ...
 fi
 ```
+
 Tambem podemos usar a seguinte notação:
 
 ```bash
@@ -142,8 +143,8 @@ fi
 
 Tambem temos operadores logicos que podem ser usados em duas ou mais condições:
 
-- `&&`: operador *AND*
-- `||`: operador *OR*
+* `&&`: operador _AND_
+* `||`: operador _OR_
 
 ```bash
 #!/bin/bash
@@ -155,7 +156,7 @@ else
 fi
 ```
 
-## Arrays
+### Arrays
 
 A criação de um array segue a seguinte sintaxe:
 
@@ -163,7 +164,7 @@ A criação de um array segue a seguinte sintaxe:
 alunos=("joao" "maria" "jose" "ana")
 ```
 
-Conseguimos acessar cada item do array através de indices, como em outras linguagens: 
+Conseguimos acessar cada item do array através de indices, como em outras linguagens:
 
 ```bash
 #!/bin/bash
@@ -188,7 +189,7 @@ echo "$(seq 5)"  # 0 1 2 3 4
 echo {1..5}   # 0 1 2 3 4
 ```
 
-## FOR
+### FOR
 
 A seguir, temos um exemplo de uso do `for`:
 
@@ -223,7 +224,8 @@ done
 # ana
 
 ```
-## WHILE
+
+### WHILE
 
 Exemplo de uso do `while`:
 
@@ -261,6 +263,7 @@ done
 
 ```
 
-# Referências:
-- https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction
-- https://learnxinyminutes.com/docs/bash/
+## Referências:
+
+* [https://learnxinyminutes.com/docs/bash/](https://learnxinyminutes.com/docs/bash/)
+* [https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction)
