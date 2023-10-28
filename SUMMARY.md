@@ -4,8 +4,8 @@
 
 ## TECH
 
-* [Shell Script](tech/shell-script/README.md)
-  * [Fundamentos](tech/shell-script/Fundamentos.md)
+* [Shell](tech/shell/README.md)
+  * [Shell Script](tech/shell/shell-script.md)
 * [Javascript](tech/javascript/README.md)
   * [Closure](tech/javascript/Closure.md)
   * [Fundamentals](tech/javascript/Fundamentals.md)

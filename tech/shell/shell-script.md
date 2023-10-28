@@ -1,4 +1,18 @@
-# Fundamentos
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Shell Script
 
 Embora muita das veze utilizados juntos, os termos `shell` e `bash` não são a mesma coisa.
 
@@ -79,9 +93,9 @@ Podemos utilizar a expressão `$((...))` para realizar operações matemáticas:
 echo $((1 + 1))   # => 2
 ```
 
-## Estrutura de controle, arrays e loops
+## Estrutura de controle
 
-### Comando `test`
+### `TEST`
 
 O comando `test` do shell permite vários tipos de testes muito uteis com valores numéricos, strings e arquivos. Temos os seguintes operadores para o `test`:
 
@@ -156,7 +170,7 @@ else
 fi
 ```
 
-### Arrays
+## Arrays
 
 A criação de um array segue a seguinte sintaxe:
 
@@ -188,6 +202,8 @@ echo "$(seq 5)"  # 0 1 2 3 4
 
 echo {1..5}   # 0 1 2 3 4
 ```
+
+## Shell Loops
 
 ### FOR
 
@@ -263,7 +279,8 @@ done
 
 ```
 
-## Referências:
+## Referências
 
 * [https://learnxinyminutes.com/docs/bash/](https://learnxinyminutes.com/docs/bash/)
 * [https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction)
+* [https://www.learnshell.org/](https://www.learnshell.org/)
