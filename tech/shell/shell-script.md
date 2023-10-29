@@ -279,7 +279,7 @@ done
 
 ```
 
-### Redirecionando outputs
+## Redirecionando outputs
 
 O bash nos permite redirecionarmos a saída de um comando para um arquivo em disco ao invés da tela do terminal. Isso é feito através do operador `>`.
 
@@ -307,7 +307,7 @@ Bye World!
 
 &#x20;Aqui a saída dos comandos presentes no script serão anexadas ao final do arquivo `hello.log`.
 
-#### Redirecionamento I/O  (entrada/saída)
+### Redirecionamento I/O  (entrada/saída)
 
 O redirecionamento de entrada/saída nos permite redirecionar a entrada ou saída de um comando para diretamente para um arquivo de texto. Porem ser redirecionadas a `stdin` (entrada padrão), `stdout` (saída padrão) e `stderr`(saída exclusiva para erros de execução do script).
 
@@ -340,3 +340,4 @@ $ bash hello_world 2>&1 /dev/null
 * [https://learnxinyminutes.com/docs/bash/](https://learnxinyminutes.com/docs/bash/)
 * [https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/#introduction)
 * [https://www.learnshell.org/](https://www.learnshell.org/)
+* [https://learning.lpi.org/en/learning-materials/010-160/3/](https://learning.lpi.org/en/learning-materials/010-160/3/)
