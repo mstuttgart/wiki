@@ -279,6 +279,62 @@ done
 
 ```
 
+### Redirecionando outputs
+
+O bash nos permite redirecionarmos a saída de um comando para um arquivo em disco ao invés da tela do terminal. Isso é feito através do operador `>`.
+
+O uso do `>` cria (caso não exista) ou sobrescreve o conteúdo do arquivo.
+
+#### Exemplo:
+
+<pre class="language-bash"><code class="lang-bash"><strong>$ echo "Hello World!" > hello.log
+</strong><strong>$ cat hello.log
+</strong><strong>Hello World!  
+</strong></code></pre>
+
+Nesse exemplo, o arquivo `hello.log` será criado (ou sobrescrito, caso exista) com a saída da execução do comandos do script `hello_world.sh`.
+
+O uso do `>>` anexa a saída do comando para o fim do arquivo.
+
+#### Exemplo:
+
+```bash
+$ echo "Bye World!" > hello.log
+$ cat hello.log
+Hello World!
+Bye World!
+```
+
+&#x20;Aqui a saída dos comandos presentes no script serão anexadas ao final do arquivo `hello.log`.
+
+#### Redirecionamento I/O  (entrada/saída)
+
+O redirecionamento de entrada/saída nos permite redirecionar a entrada ou saída de um comando para diretamente para um arquivo de texto. Porem ser redirecionadas a `stdin` (entrada padrão), `stdout` (saída padrão) e `stderr`(saída exclusiva para erros de execução do script).
+
+```bash
+# Utiliza o arquivo stdin.log como entrada para o script
+$ bash hello_world.sh < stdin.log
+
+# redireciona a saída do script para o arquivo stdout.log
+$ bash hello_world.sh > stdout.log
+
+# rediciona a saída de erros do scritp para o arquivo stderr.log. Nesse caso, a 
+# saída padrão ainda será exibida 
+$ bash hello_world.sh 2> stderr.log
+
+# redireciona a saida padrão e a saida de erros para o arquivo stdout_err.log
+$ bash hello_world.sh 2>&1 stdout_err.log
+
+# equivalente ao comando acima
+$ bash hello_world.sh 2> stderr.log > stdout.log
+```
+
+Caso o objetivo seja "esconder" a saída padrão e/ou de erros do script, podemos redirecioná-las para uma saída "nula"
+
+```bash
+$ bash hello_world 2>&1 /dev/null
+```
+
 ## Referências
 
 * [https://learnxinyminutes.com/docs/bash/](https://learnxinyminutes.com/docs/bash/)
