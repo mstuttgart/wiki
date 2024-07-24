@@ -1,6 +1,8 @@
-# Open Close Principle (OCP)
+---
+description: Princípio do Aberto-Fechado, em pt-BR.
+---
 
-_Princípio do Aberto-Fechado, em pt-BR._
+# Open Close Principle (OCP)
 
 Este postulado define o seguinte:
 
@@ -8,8 +10,8 @@ Este postulado define o seguinte:
 
 Em outras palavras:
 
-* "aberta para extensão": significa que o comportamento da classe pode ser extendido. Podemos fazer um método da classe se comportar de forma diferente de acordo com as mudanças exigidas pela aplicação ao qual ele pertence, ou para ir de encontro as necessidades de novas aplicações.
-* "fechadas para modificação": o código fonte da classe é inviolável. Ninguém tem a permissão de alterar o código fonte original da classe para atender a novos requisitos da aplicação. O risco de alterar o código fonte da classe é que isso pode impactar no funcionamento de outras rotinas que dependem do comportamento dessa classe.
+* "aberta para extensão": significa que o comportamento da classe pode ser entendido. Podemos fazer um método da classe se comportar de forma diferente conforme as mudanças exigidas pela aplicação ao qual ele pertence, ou para ir de encontro as necessidades de novas aplicações.
+* "fechadas para modificação": o código-fonte da classe é inviolável. Ninguém tem a permissão de alterar o código-fonte original da classe para atender a novos requisitos da aplicação. O risco de alterar o código-fonte da classe é que isso pode impactar no funcionamento de outras rotinas que dependem do comportamento dessa classe.
 
 Com exemplo, vamos considerar a seguinte classe que representa as figuras geométricas quadrado e circulo.
 
@@ -52,9 +54,9 @@ class ShapeAreaCalculator:
         return area
 ```
 
-O problema da classe `ShapeAreaCalculator`é que, cada vez que uma nova figura geométrica for adicionada, temos que adicionar um novo `if` para verificar o tipo da figura, fazendo com que o método `calc_area` fique cada vez maior. Em outras palavras, a classe `ShapeAreaCalculator` não esta fechada para modificação.
+O problema da classe `ShapeAreaCalculator`é que, cada vez que uma nova figura geométrica for adicionada, temos que adicionar um novo `if` para verificar o tipo da figura, fazendo com que o método `calc_area` fique cada vez maior. Em outras palavras, a classe `ShapeAreaCalculator` não está fechada para modificação.
 
-Para iniciar os ajustes, vamos melhorar as classes de figuras geométricas criando uma classe base `Shape`, que irá possuir um método `area`, que será herdado por todas as figuras que extender essa classe:
+Para iniciar os ajustes, vamos melhorar as classes de figuras geométricas criando uma classe base `Shape`, que irá possuir um método `area`, que será herdado por todas as figuras que herdarem essa classe:
 
 ```python
 class Shape:
@@ -91,7 +93,7 @@ class Circle(Shape):
 	    return math.pi * self.radius ** 2
 ```
 
-Agora, qualquer nova figura geométrica deve extender a classe `Shape` e implementar seu próprio método `area`. As classes de figura agora estão abertas para extensão e fechadas para modificação (não será necessário alterar nenhuma delas quando uma nova figura for adicionada).
+Agora, qualquer nova figura geométrica deve herdar a classe `Shape` e implementar seu próprio método `area`. As classes de figura agora estão abertas para extensão e fechadas para modificação (não será necessário alterar nenhuma delas quando uma nova figura for adicionada).
 
 Agora, vamos corrigir o método `calc_area` de modo a deixá-lo fechado para modificação:
 
@@ -105,3 +107,7 @@ class ShapeAreaCalculator:
 ```
 
 Agora, o método `calc_area` está fechado para modificação. Independente do número de figuras geométricas que forem adicionadas na nossa aplicação.
+
+### Fontes
+
+[https://web.archive.org/web/20150415215806/http://www.objectmentor.com/resources/articles/ocp.pdf](https://web.archive.org/web/20150415215806/http://www.objectmentor.com/resources/articles/ocp.pdf)
