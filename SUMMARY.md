@@ -7,10 +7,13 @@
 * [Shell](tech/shell/README.md)
   * [Shell Script](tech/shell/shell-script.md)
 * [Javascript](tech/javascript/README.md)
-  * [Closure](tech/javascript/Closure.md)
-  * [Fundamentals](tech/javascript/Fundamentals.md)
-  * [Promises](tech/javascript/Promises.md)
-  * [Regex](tech/javascript/Regex.md)
+  * [Closure](tech/javascript/closure.md)
+  * [Fundamentals](tech/javascript/fundamentals.md)
+  * [Promises](tech/javascript/promises.md)
+  * [Regex](tech/javascript/regex.md)
+* [SOLID](tech/solid/README.md)
+  * [Open Close Principle (OCP)](tech/solid/open-close-principle-ocp.md)
+  * [Single Responsability Principle (SRP)](tech/solid/single-responsability-principle-srp.md)
 
 ## Books
 
