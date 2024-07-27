@@ -18,6 +18,6 @@ As letras do acrônimo possuem o seguinte significado:
 * O - [Open Close Principle](open-close-principle.md)
 * L - [Liskov Substitution Principle](liskov-substitution-principle.md)
 * I - [Interface Segregation Principle](interface-segregation-principle.md)
-* D - Dependency Inversion Principle
+* D - [Dependency Inversion Principle](dependency-inversion-principle.md)
 
 Estes princípios (ou postulados) auxiliam o desenvolvedor a projetar e escrever softwares Orientado a Objetos com baixo acoplamento, alta coesão e facilitando a manutenção e refatoração do código, quando necessárias.
