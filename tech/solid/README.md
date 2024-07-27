@@ -14,8 +14,8 @@ A abreviação **SOLID** foi proposta, posteriormente, por Michael Feathers.&#x2
 
 As letras do acrônimo possuem o seguinte significado:
 
-* S - [Single Responsability Principle (SRP)](single-responsability-principle-srp.md)
-* O - [Open Close Principle (OCP)](open-close-principle-ocp.md)
+* S - [Single Responsability Principle](single-responsability-principle.md)
+* O - [Open Close Principle](open-close-principle.md)
 * L - [Liskov Substitution Principle](liskov-substitution-principle.md)
 * I - [Interface Segregation Principle](interface-segregation-principle.md)
 * D - Dependency Inversion Principle

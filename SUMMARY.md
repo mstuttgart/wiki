@@ -12,8 +12,8 @@
   * [Promises](tech/javascript/promises.md)
   * [Regex](tech/javascript/regex.md)
 * [SOLID](tech/solid/README.md)
-  * [Open Close Principle (OCP)](tech/solid/open-close-principle-ocp.md)
-  * [Single Responsability Principle (SRP)](tech/solid/single-responsability-principle-srp.md)
+  * [Single Responsability Principle](tech/solid/single-responsability-principle.md)
+  * [Open Close Principle](tech/solid/open-close-principle.md)
   * [Liskov Substitution Principle](tech/solid/liskov-substitution-principle.md)
   * [Interface Segregation Principle](tech/solid/interface-segregation-principle.md)
 
