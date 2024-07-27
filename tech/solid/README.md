@@ -16,7 +16,7 @@ As letras do acrônimo possuem o seguinte significado:
 
 * S - [Single Responsability Principle (SRP)](single-responsability-principle-srp.md)
 * O - [Open Close Principle (OCP)](open-close-principle-ocp.md)
-* L - Liskov Substitution Principle
+* L - [Liskov Substitution Principle](liskov-substitution-principle.md)
 * I - Interface Segregation Principle
 * D - Dependency Inversion Principle
 
