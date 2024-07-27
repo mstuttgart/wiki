@@ -15,6 +15,7 @@
   * [Open Close Principle (OCP)](tech/solid/open-close-principle-ocp.md)
   * [Single Responsability Principle (SRP)](tech/solid/single-responsability-principle-srp.md)
   * [Liskov Substitution Principle](tech/solid/liskov-substitution-principle.md)
+  * [Interface Segregation Principle](tech/solid/interface-segregation-principle.md)
 
 ## Books
 
