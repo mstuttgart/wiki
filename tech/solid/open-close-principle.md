@@ -2,7 +2,7 @@
 description: Princípio do Aberto-Fechado, em pt-BR.
 ---
 
-# Open Close Principle (OCP)
+# Open Close Principle
 
 Este postulado define o seguinte:
 
@@ -10,13 +10,13 @@ Este postulado define o seguinte:
 
 Em outras palavras:
 
-* "aberta para extensão": significa que o comportamento da classe pode ser entendido. Podemos fazer um método da classe se comportar de forma diferente conforme as mudanças exigidas pela aplicação ao qual ele pertence, ou para ir de encontro as necessidades de novas aplicações.
-* "fechadas para modificação": o código-fonte da classe é inviolável. Ninguém tem a permissão de alterar o código-fonte original da classe para atender a novos requisitos da aplicação. O risco de alterar o código-fonte da classe é que isso pode impactar no funcionamento de outras rotinas que dependem do comportamento dessa classe.
+* **Aberta para extensão**: significa que o comportamento da classe pode ser entendido. Podemos fazer um método da classe se comportar de forma diferente conforme as mudanças exigidas pela aplicação ao qual ele pertence, ou para ir de encontro as necessidades de novas aplicações.
+* **Fechadas para modificação**: o código-fonte da classe é inviolável. Ninguém tem a permissão de alterar o código-fonte original da classe para atender a novos requisitos da aplicação. O risco de alterar o código-fonte da classe é que isso pode impactar no funcionamento de outras rotinas que dependem do comportamento dessa classe.
 
 Com exemplo, vamos considerar a seguinte classe que representa as figuras geométricas quadrado e circulo.
 
 ```python
-class Square:
+class Square(Shape):
 	
     def __init__(self, lenght):
 	    super().__init__()
@@ -26,7 +26,7 @@ class Square:
 e
 
 ```python
-class Circle:
+class Circle(Shape):
 	
 	def __init__(self, radius):
 	    super().__init__()

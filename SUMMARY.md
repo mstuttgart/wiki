@@ -16,6 +16,7 @@
   * [Open Close Principle](tech/solid/open-close-principle.md)
   * [Liskov Substitution Principle](tech/solid/liskov-substitution-principle.md)
   * [Interface Segregation Principle](tech/solid/interface-segregation-principle.md)
+  * [Dependency Inversion Principle](tech/solid/dependency-inversion-principle.md)
 
 ## Books
 

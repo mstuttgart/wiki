@@ -22,7 +22,7 @@ class Shape:
 A classe **Shape**, é normalmente utilizada como classe base para as classes **Square** e **Circle**, figuras geométricas cujas classes implementam o método _area_.&#x20;
 
 ```python
-class Square:
+class Square(Shape):
 	
     def __init__(self, lenght):
         super().__init__()
@@ -33,7 +33,7 @@ class Square:
 ```
 
 ```python
-class Circle:
+class Circle(Shape):
 	
     def __init__(self, radius):
         super().__init__()
